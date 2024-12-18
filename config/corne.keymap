@@ -5,82 +5,16 @@
 #include "zmk-helpers/key-labels/42.h"
 #include "zmk-helpers/unicode-chars/german.dtsi"
 
-
-
-#define ___ &trans
-
-#define DEF 0
-#define NAV 1
-#define NUM 2
-#define SYM 3
-#define EXT 4
-
-/* Timeless homerow mods */
-
-// https://github.com/urob/zmk-config/tree/main#timeless-homerow-mods
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left hand
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right hand
-#define THUMBS LH1 LH0 RH0 RH1                                              // thumbs
-
-ZMK_HOLD_TAP(hml,
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    require-prior-idle-ms = <150>;
-    hold-trigger-key-positions = <KEYS_R THUMBS>;
-    hold-trigger-on-release;
-    bindings = <&kp>, <&kp>;
-)
-
-ZMK_HOLD_TAP(hmr,
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    require-prior-idle-ms = <150>;
-    hold-trigger-key-positions = <KEYS_L THUMBS>;
-    hold-trigger-on-release;
-    bindings = <&kp>, <&kp>;
-)
-
-
-/* Custom behaviors */
-
-// tap: copy | double-tap: cut
-ZMK_TAP_DANCE(copy_cut,
-    tapping-term-ms = <200>;
-    bindings = <&kp LC(INS)>, <&kp LC(X)>;
-)
-
-// tap: backspace | shift + tap: delete | hold: num layer
-ZMK_MOD_MORPH(bs_del_num,
-    bindings = <&lt NUM BSPC>, <&kp DEL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-// windows sleep macro
-ZMK_MACRO(win_sleep,
-    wait-ms = <100>;
-    tap-ms = <5>;
-    bindings = <&kp LG(X) &kp U &kp S>;
-)
-
-
-// replace a/o/u/s with German umlauts when NAV and NUM are held jointly
-// ZMK_CONDITIONAL_LAYER(ger, NAV NUM, EXT)
-
-// combos
-//ZMK_COMBO(sleep,    &win_sleep,  RT3 RT4, NAV)  // put Windows to sleep, only active on NAV layer
-// ZMK_COMBO(copy_cut, &copy_cut,   LB2 LB3, ALL)  // copy on tap, cut on double-tap, active on all layers
-// ZMK_COMBO(paste,    &kp LS(INS), LB1 LB2, ALL)  // paste, active on all layers
-
-/* Keymap */
-
-ZMK_LAYER(default_layer,
-   //   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬────────────┬─────────────╮
-             &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P    &kp BACKSPACE
-     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼────────────┼─────────────┤
-          ___         &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F     &kp G            &kp H      &hmr RSHFT J  &hmr LCTRL K   &hmr LALT L  &hmr LGUI SEMI &sk LSHIFT
-     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼────────────┼─────────────┤
-          ___           &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH    ___
-     // ╰─────────────────────────────────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼────────────────────────────────────────╯
-                                                  ____ ____   ____      ____ ____  ____
-     //                                           ╰─────────────┼─────────────┼─────────────╯   ╰─────────────┼─────────────┼─────────────╯
-)
+/* map Corne's extra keys */
+#define X_LT &none
+#define X_LM &none
+#define X_LB &none
+#define X_LH &none
+#define X_RT &none
+#define X_RM &none
+#define X_RB &none
+#define X_RH &none
+/* activate bluetooth */
+#define CONFIG_WIRELESS 1
+/* source the main keymap */
+#include "base.keymap"
