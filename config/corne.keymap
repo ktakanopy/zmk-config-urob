@@ -63,11 +63,8 @@ ZMK_MACRO(win_sleep,
 )
 
 
-// euro sign
-ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
-
 // replace a/o/u/s with German umlauts when NAV and NUM are held jointly
-ZMK_CONDITIONAL_LAYER(ger, NAV NUM, GER)
+ZMK_CONDITIONAL_LAYER(ger, NAV NUM, EXT)
 
 // combos
 ZMK_COMBO(sleep,    &win_sleep,  RT3 RT4, NAV)  // put Windows to sleep, only active on NAV layer
@@ -84,7 +81,7 @@ ZMK_LAYER(default_layer,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼────────────┼─────────────┤
           ___           &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH    ___
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼────────────────────────────────────────╯
-                                                  &lt LGUI ESC  &lt NAV RET   &lt EXT TAB       &lt SYM TAB &bs_del_num   &sk LSHFT
+                                                  ____ ____   ____      ____ ____  ____
      //                                           ╰─────────────┼─────────────┼─────────────╯   ╰─────────────┼─────────────┼─────────────╯
 )
 
