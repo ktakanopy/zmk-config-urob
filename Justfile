@@ -19,7 +19,7 @@ _parse_combos:
                 sort | uniq -c | sort -nr |
                 awk 'NR==1{print $1}'
         )
-        sed -Ei "/CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY/s/=.+/=$count/" "{{ config }}"/*.conf
+        sed -i '' -E "/CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY/s/=.+/=$count/" "{{ config }}"/*.conf
         echo "Setting MAX_COMBOS_PER_KEY to $count"
 
         # set MAX_KEYS_PER_COMBO to the most frequent key count
@@ -29,7 +29,7 @@ _parse_combos:
                 cut -d : -f 1 | uniq -c | sort -nr |
                 awk 'NR==1{print $1}'
         )
-        sed -Ei "/CONFIG_ZMK_COMBO_MAX_KEYS_PER_COMBO/s/=.+/=$count/" "{{ config }}"/*.conf
+        sed -i '' -E "/CONFIG_ZMK_COMBO_MAX_KEYS_PER_COMBO/s/=.+/=$count/" "{{ config }}"/*.conf
         echo "Setting MAX_KEYS_PER_COMBO to $count"
     fi
 
