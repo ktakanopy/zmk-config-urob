@@ -1,20 +1,20 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-
-#include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/42.h"
-#include "zmk-helpers/unicode-chars/german.dtsi"
+
+#define NAV 1
 
 /* map Corne's extra keys */
-#define X_LT &none
-#define X_LM &none
-#define X_LB &none
+#define X_LT &kp RC(RG(Q))
+#define X_LM &kp LS(RETURN)
+#define X_LB &kp (LG(D))
 #define X_LH &none
+
 #define X_RT &none
-#define X_RM &none
-#define X_RB &none
+#define X_RM &tog NAV
+#define X_RB &kp LG(LS(LA(R)))
 #define X_RH &none
+
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
+
 /* source the main keymap */
 #include "base.keymap"
