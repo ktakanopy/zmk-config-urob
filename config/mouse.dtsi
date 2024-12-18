@@ -6,15 +6,12 @@
 
 // Config from @caksoylar, defaults in comments
 &mmv {
-  acceleration-exponent = <1>;          // 1
-  time-to-max-speed-ms = <500>;         // 300
-  delay-ms = <0>;                       // 0
+    time-to-max-speed-ms = <680>;
+    acceleration-exponent = <2>;
 };
 
 &msc {
-  acceleration-exponent = <1>;          // 0
-  time-to-max-speed-ms = <800>;         // 300
-  delay-ms = <0>;                       // 0
+    time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
 };
 
 #define U_MS_U &mmv MOVE_UP
