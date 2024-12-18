@@ -182,6 +182,11 @@ ZMK_MACRO(dot_spc,
     bindings = <&kp DOT &kp SPACE &sk LSHFT>;
 )
 
+ZMK_MACRO(tv,
+    bindings = <&none>, <&macro_tap>, <&kp LC(SPACE) &kp LEFT_BRACKET>;
+)
+
+
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
 ZMK_MOD_MORPH(bs_del,
     bindings = <&kp BSPC>, <&kp DEL>;
@@ -243,11 +248,11 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(nav,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp LG(GRAVE)  &kp LG(LBRC)  &kp LG(RBRC)    &kp LS(TAB)  &swapper      X_MT     ___            ___            NAV_BSPC      NAV_DEL        ___           X_RT
+    X_LT     &kp LG(GRAVE)  ___         &kp LS(TAB)    &swapper      ___             X_MT     ___            ___            NAV_BSPC      NAV_DEL        ___           X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM       &sk LCTRL       &sk LALT     &sk LGUI     &sk LSHFT     ___           X_MM       NAV_LEFT      NAV_DOWN       &kp UP      &kp DOWN     &kp RET         X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           ___          &kp LC(SPACE) ___           ___              X_MB     &kp INS       &kp TAB       ___           &kp PG_UP      &kp PG_DN        X_RB
+    X_LB     ___           &kp LG(LBRC)   &kp LG(RBRC)  &kp LC(SPACE) &tv              X_MB     &kp INS       &kp TAB       ___           &kp PG_UP      &kp PG_DN        X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     ___           CANCEL                                                    X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
