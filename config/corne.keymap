@@ -64,7 +64,7 @@ ZMK_MACRO(win_sleep,
 
 
 // replace a/o/u/s with German umlauts when NAV and NUM are held jointly
-ZMK_CONDITIONAL_LAYER(ger, NAV NUM, EXT)
+// ZMK_CONDITIONAL_LAYER(ger, NAV NUM, EXT)
 
 // combos
 ZMK_COMBO(sleep,    &win_sleep,  RT3 RT4, NAV)  // put Windows to sleep, only active on NAV layer
