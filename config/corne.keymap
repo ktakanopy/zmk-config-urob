@@ -71,54 +71,7 @@ ZMK_MACRO(win_sleep,
     tap-ms = <5>;
     bindings = <&kp LG(X) &kp U &kp S>;
 )
-// Tilde Macro
-ZMK_MACRO(tilde_macro,
-    wait-ms = <0>;
-    tap-ms = <50>;
-    bindings = <&kp TILDE &kp SPACE>;
-);
 
-// Home Tilde Macro
-ZMK_MACRO(home_tilde,
-    wait-ms = <0>;
-    tap-ms = <50>;
-    bindings = <&kp TILDE &kp SPACE &kp SLASH>;
-);
-
-// G Underscore Macro
-ZMK_MACRO(g_,
-    wait-ms = <0>;
-    tap-ms = <50>;
-    bindings = <&kp G &kp UNDERSCORE>;
-);
-
-// Home Tilde Hidden Macro
-ZMK_MACRO(home_tilde_hidden,
-    wait-ms = <0>;
-    tap-ms = <50>;
-    bindings = <&kp TILDE &kp SPACE &kp SLASH &kp PERIOD>;
-);
-
-// TMUX Visual Macro
-ZMK_MACRO(tmux_visual,
-    wait-ms = <0>;
-    tap-ms = <50>;
-    bindings = <&kp LC(SPACE) &kp LEFT_BRACKET>;
-);
-
-// Quotes Space Macro
-ZMK_MACRO(quotes_space,
-    wait-ms = <0>;
-    tap-ms = <50>;
-    bindings = <&kp DOUBLE_QUOTES &kp SPACE>;
-);
-
-// Single Quote Space Macro
-ZMK_MACRO(single_quote_space,
-    wait-ms = <0>;
-    tap-ms = <50>;
-    bindings = <&kp SINGLE_QUOTE &kp SPACE>;
-);
 
 // euro sign
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
@@ -170,16 +123,17 @@ ZMK_LAYER(num_layer,
 )
 
 ZMK_LAYER(sym_layer,
-   //   ╭─────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬──────────────┬───────────────╮
-         &kp GRAVE    &kp EXCLAMATION  &kp AT_SIGN     &kp HASH         &kp DOLLAR      &kp PERCENT        &kp CARET       &kp AMPERSAND   &kp ASTERISK    &kp UNDER      &kp MINUS        &kp TILDE
-     // ├─────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼──────────────┼───────────────┤
-          &kp LCTRL  &kp LESS_THAN &kp LEFT_PARENTHESIS &kp LEFT_BRACKET &kp LEFT_BRACE  &kp BACKSLASH    &kp SLASH       &kp RIGHT_BRACE &kp RIGHT_BRACKET &kp RIGHT_PARENTHESIS &kp GREATER_THAN  &tilde_macro
-     // ├─────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼──────────────┼───────────────┤
-          &kp LALT       &g_              &kp MINUS        &kp PLUS        &kp EQUAL     &kp COLON        &kp SEMICOLON    &kp QUESTION       &quotes_space &single_quote_space     &tmux_visual      &trans
-     // ╰─────────────────────────────────────────────┼───────────────┼───────────────┼───────────────┤   ╰───────────────┼───────────────┼───────────────┼────────────────────────────────────────╯
-                                                         &sk LGUI        &trans            &none              &trans            &trans             &trans
-     //                                           ╰───────────────┼───────────────┼───────────────╯   ╰───────────────┼───────────────┼───────────────╯
+   //   ╭───────────────┬────────────────┬────────────────┬────────────────┬────────────────┬───────────────╮   ╭───────────────┬────────────────┬────────────────┬────────────────┬────────────────┬───────────────╮
+         &kp GRV          &kp EXCL          &kp AT          &kp HASH         &kp DLR         &kp PERC              &kp CARET       &kp AMPS         &kp ASTR         &kp UNDER       &kp MINS         &kp TILD
+     // ├───────────────┼────────────────┼────────────────┼────────────────┼────────────────┼───────────────┤   ├───────────────┼────────────────┼────────────────┼────────────────┼────────────────┼───────────────┤
+          &kp LCTRL        &kp LT            &kp LPAR         &kp LBRACK       &kp LBRC         &kp BSLH             &kp SLASH       &kp RBRC         &kp RBRACK       &kp RPAR          &kp GT            ___
+     // ├───────────────┼────────────────┼────────────────┼────────────────┼────────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼──────────────┼───────────────┤
+          &kp LALT         ___              &kp MINS         &kp PLUS         &kp EQL          &kp COLN            &kp SCLN        &kp QUES         ___  ___  ___      ___
+     // ╰─────────────────────────────────────────────────┼────────────────┼────────────────┼───────────────┤   ╰───────────────┼───────────────┼───────────────┼─────────────────────────────────────────────╯
+                                                              &sk LGUI        &trans            &none              &trans            &trans             &trans
+     //                                                   ╰────────────────┼───────────────┼───────────────╯   ╰───────────────┼───────────────┼───────────────╯
 )
+
 
 
 ZMK_LAYER(extras_layer,
