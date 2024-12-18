@@ -44,12 +44,6 @@ ZMK_HOLD_TAP(hmr,
     bindings = <&kp>, <&kp>;
 )
 
-ZMK_HOLD_TAP(nht, // normal hold tap
-    flavor = "balanced";
-    tapping-term-ms = <220>;
-    require-prior-idle-ms = <150>;
-    bindings = <&kp>, <&kp>;
-)
 
 /* Custom behaviors */
 
@@ -94,7 +88,7 @@ ZMK_LAYER(default_layer,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼────────────┼─────────────┤
           ___           &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH    ___
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼────────────────────────────────────────╯
-                                                  &nht LGUI ESC  &lt NAV RET   &lt EXT TAB       &lt SYM TAB &bs_del_num   &sk LSHFT
+                                                  &lt LGUI ESC  &lt NAV RET   &lt EXT TAB       &lt SYM TAB &bs_del_num   &sk LSHFT
      //                                           ╰─────────────┼─────────────┼─────────────╯   ╰─────────────┼─────────────┼─────────────╯
 )
 
