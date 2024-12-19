@@ -62,7 +62,7 @@ ZMK_MACRO(qtspc,
 ZMK_COMBO(togfun, &tog FUN, LH0 LH1 LH2, DEF NAV NUM FUN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW) // end kevin
 
 
-ZMK_COMBO(qtspccomb, &qtspc, RM3, RM4,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW) // end kevin
+ZMK_COMBO(qtspccomb, &qtspc, RM3 RM4, DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW) // end kevin
 
 
 ZMK_COMBO(qtspccomb, &qtspc,    RT0 RT1,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
