@@ -61,9 +61,21 @@ ZMK_MACRO(qtspc,
     bindings = <&macro_tap &kp DQT &kp SPACE>;
 ) 
 
+ZMK_MACRO(tilspc,
+    bindings = <&macro_tap  &kp TILDE &kp SPACE>;
+)
+
+
+ZMK_MACRO(vimg,
+    bindings = <&macro_tap  &kp G &kp UNDER>;
+)
+
+ZMK_COMBO(vimgc, &vimg,    LT2 LM1,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(tilspcc, &tilspc,    LM3 LM2,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+
 ZMK_COMBO(togfun, &tog FN, LH0 LH1, DEF NAV FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW) 
 
-ZMK_COMBO(qtspccomb, &qtspc, RM1 RT4, DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(qtspccomb, &qtspc, RM1 RT2, DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 ZMK_COMBO(plus,  &kp PLUS,     RT1 RM1,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(star,  &kp STAR,     RT2 RM2,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
