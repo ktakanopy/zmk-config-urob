@@ -245,3 +245,250 @@ combos:
   - p: [8, 9]
     k: DEL
     l: [base, nav, num]
+layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
+layers:
+  base:
+    - TAB
+    - Q
+    - W 
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - BSPC
+    - {t: LSHFT, h: sticky}
+    - {t: A, h: LCTRL}
+    - {t: S, h: LALT}
+    - {t: D, h: LGUI}
+    - {t: F, h: LSHFT}
+    - G
+    - H
+    - {t: J, h: RSHFT}
+    - {t: K, h: RGUI}
+    - {t: L, h: RALT}
+    - {t: "'", h: RCTRL}
+    - {t: RSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - N
+    - M
+    - {t: ",", h: ";"}
+    - {t: ".", h: ":"}
+    - "/"
+    - {t: LCTRL, h: sticky}
+    - {t: ESC, h: LGUI}
+    - {t: NAV, h: SPACE}
+    - {t: MOUSE, h: TAB}
+    - SYM
+    - {t: NUM, h: smart}
+
+  nav:
+    - tab
+    - LG(GRAVE)
+    - {t: "▽", type: trans}
+    - LS(TAB)
+    - {t: "⌥ TAB", h: swap}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - BSPC
+    - DEL
+    - {t: "▽", type: trans}
+    - BSPC
+    - {t: LSHFT, h: sticky}
+    - {t: "▽", type: trans}
+    - LG(LBRC)
+    - LG(RBRC)
+    - LC(SPACE)
+    - {t: "▽", type: trans}
+    - LEFT
+    - DOWN
+    - UP
+    - RIGHT
+    - {t: "▽", type: trans}
+    - {t: RSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - LG(RET)
+    - LS(RET)
+    - {t: "▽", type: trans}
+    - INS
+    - HOME
+    - END
+    - PG_UP
+    - PG_DN
+    - {t: LCTRL, h: sticky}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - RET
+
+  mouse:
+    - tab
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - PG_UP
+    - "&mmv MOVE_UP"
+    - PG_DN
+    - {t: "▽", type: trans}
+    - BSPC
+    - {t: LSHFT, h: sticky}
+    - LG(Z)
+    - LG(X)
+    - LG(C)
+    - LG(V)
+    - LG(LS(Z))
+    - "&mmv MOVE_LEFT"
+    - "&mmv MOVE_DOWN"
+    - "&mmv MOVE_RIGHT"
+    - {t: "▽", type: trans}
+    - {t: RSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - "&mkp LCLK"
+    - "&mkp MCLK"
+    - "&mkp RCLK"
+    - {t: "▽", type: trans}
+    - {t: LCTRL, h: sticky}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - "&mwh SCROLL_UP"
+    - "&mwh SCROLL_DOWN"
+    - {t: "▽", type: trans}
+
+  sym:
+    - tab
+    - "!"
+    - "@"
+    - "#"
+    - "$"
+    - "%"
+    - "^"
+    - "&"
+    - "*"
+    - "_"
+    - "-"
+    - BSPC
+    - {t: LSHFT, h: sticky}
+    - "?"
+    - "_"
+    - ":"
+    - "="
+    - "`"
+    - "-"
+    - "["
+    - "{"
+    - "}"
+    - "]"
+    - {t: RSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - {t: "▽", type: trans}
+    - "|"
+    - ";"
+    - "+"
+    - "~"
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - "("
+    - ")"
+    - {t: "▽", type: trans}
+    - {t: LCTRL, h: sticky}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+
+  num:
+    - tab
+    - "1"
+    - "2"
+    - "3"
+    - "4"
+    - "5"
+    - "6"
+    - "7"
+    - "8"
+    - "9"
+    - "0"
+    - BSPC
+    - {t: LSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - {t: LALT, h: sticky}
+    - {t: LGUI, h: sticky}
+    - {t: LSHFT, h: sticky}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: RSHFT, h: sticky}
+    - {t: RGUI, h: sticky}
+    - {t: RALT, h: sticky}
+    - {t: RCTRL, h: sticky}
+    - {t: RSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: LCTRL, h: sticky}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+
+combos:
+  - p: [3, 2]
+    k: ESC
+    l: [base, nav, num]
+  - p: [2, 1]
+    k: RET
+    l: [base, nav, num]
+  - p: [3, 1]
+    k: {t: MOUSE, h: smart}
+    l: [base, nav, num]
+  - p: [14, 13]
+    k: {t: LEADER, h: sticky}
+    l: [base, nav, num]
+  - p: [15, 14, 13]
+    k: {t: "LEADER+SHIFT"}
+    l: [base, nav, num]
+  - p: [25, 23]
+    k: LC(X)
+    l: [base, nav, num]
+  - p: [25, 24]
+    k: LC(INS)
+    l: [base, nav, num]
+  - p: [24, 23]
+    k: LS(INS)
+    l: [base, nav, num]
+  - p: [7, 8]
+    k: BSPC
+    l: [base, nav, num]
+  - p: [8, 9]
+    k: DEL
+    l: [base, nav, num]
