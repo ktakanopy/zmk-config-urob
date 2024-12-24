@@ -1,0 +1,59 @@
+Consider the files in the context:
+
+
+ 1 config/base.keymap:
+
+ • Main keymap file for a ZMK keyboard configuration
+ • Defines multiple layers (base, nav, fn, num, sys, mouse, sym)
+ • Contains complex behaviors like hold-tap, combos, and leader key sequences
+ • Includes various custom macros and key definitions
+
+ 2 config/combos.dtsi:
+
+ • Defines keyboard combos (pressing multiple keys together)
+ • Contains combo timing configurations
+ • Maps various key combinations to specific actions
+ • Includes visual key position documentation
+
+ 3 config/corne.keymap:
+
+ • Specific configuration for the Corne keyboard
+ • Includes the base keymap and key labels
+ • Acts as the entry point for the keyboard's configuration
+
+ 4 config/mouse.dtsi:
+
+ • Mouse movement and scrolling configurations
+ • Defines pointer settings for high-resolution displays
+ • Contains movement acceleration parameters
+ • Sets up mouse movement and scrolling macros
+
+ 5 config/leader.dtsi:
+
+ • Configures leader key sequences (similar to Vim's leader key)
+ • Defines various Unicode character inputs (German umlauts, Greek letters)
+ • Contains Bluetooth and system control sequences
+ • Uses custom macro definitions for leader sequences
+
+ 6 keymap_drawer_yaml_example.yaml:
+
+ • Visualization configuration for the keymap-drawer tool
+ • Defines the keyboard layout and layers for corne. 
+ • Maps keys, combos, and their behaviors
+ • You ll use this as example.
+
+The files work together to create a complete keyboard firmware configuration with:
+
+ • Multiple layers for different key functions
+ • Complex key combinations
+ • Mouse control
+ • Special character input
+ • System control functions
+ • Bluetooth connectivity options
+
+
+consider this config/base.keymap and config/corne.keymap of urob/zmk-config are zmk configuration with my key, shortcuts, and my layout. The config/combos.dtsi. Id like to create a yaml to parse in keymap-drawer (https://github.com/caksoylar/keymap
+-drawer) to draw a layout from this keymap. Generate a yaml in the file config/layout.yaml to i generate a layout image for my corne with 42 keys. dont append the file, always rewrite from zero. You can use the keymap_drawer_yaml_example as a example to generate yours as a base. Rules:
+
+- Ignore the keys X_MT, X_MM, X_MB, X_MH 
+- All layers must have 42 keys
