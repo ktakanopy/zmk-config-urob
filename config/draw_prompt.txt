@@ -57,3 +57,7 @@ consider this config/base.keymap and config/corne.keymap of urob/zmk-config are 
 
 - Ignore the keys X_MT, X_MM, X_MB, X_MH 
 - All layers must have 42 keys
+- if you see a "___" consider this like a undefined key, therefore you can put "{t: "▽", type: trans}".
+- For the "layout:" use always this format:
+    layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
+- double check 42 rows/keys/lines in each layer. if its missing some key, add a "{t: "▽", type: trans}".
