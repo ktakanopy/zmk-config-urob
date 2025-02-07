@@ -130,7 +130,7 @@ ZMK_HOLD_TAP(smart_num,
 
 ZMK_TAP_DANCE(num_dance,
     tapping-term-ms = <200>;
-    bindings = <&kp RET>, <&num_word NAV>;  // reverse this for sticky-num on single tap
+    bindings = <&kp BSPC>, <&num_word NAV>;  // reverse this for sticky-num on single tap
 )
 
 // smart-mouse, requires PR #1366
@@ -239,7 +239,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &sk LCTRL     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &comma_morph  &dot_morph    &kp FSLH     &sk LCTRL
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                    &fst_lt LGUI ESC   &lt_spc NAV 0  &lt MOUSE TAB  X_MH    &mo SYM    SMART_NUM  SMART_SHIFT
+                                    &fst_lt LGUI ESC   &lt_spc NAV 0  &lt MOUSE TAB  X_MH     &lt SYM RET   SMART_NUM  SMART_SHIFT
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
