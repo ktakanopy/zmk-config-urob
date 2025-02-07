@@ -1,0 +1,48 @@
+layout:
+  qmk_keyboard: corne
+  split: true
+layers:
+  base:
+    - [Q, W, E, R, T, Y, U, I, O, P]
+    - [{t: A, h: LCTRL}, {t: S, h: LALT}, {t: D, h: LGUI}, {t: F, h: LSHFT}, G, H, {t: J, h: RSHFT}, {t: K, h: RGUI}, {t: L, h: RALT}, {t: "'", h: RCTRL}]
+    - [Z, X, C, V, B, N, M, {t: ",", h: comma_morph}, {t: ".", h: dot_morph}, "/"]
+    - [{t: ESC, h: LGUI}, {t: SPACE, h: NAV}, {t: TAB, h: MOUSE}, {t: SYM}, {t: NUM}, {t: SHFT}]
+  nav:
+    - [{t: "`", h: LG}, {t: null}, {t: "S-TAB"}, {t: "ALT-TAB"}, {t: null}, {t: null}, {t: null}, {t: "BSPC"}, {t: "DEL"}, {t: null}]
+    - [{t: CTRL}, {t: "←", h: LALT}, {t: "→", h: LGUI}, {t: "SPACE", h: LSHFT}, {t: null}, LEFT, DOWN, UP, RIGHT, {t: null}]
+    - [{t: null}, {t: null}, {t: "RET"}, {t: "S-RET"}, {t: null}, INS, HOME, END, "PG_UP", "PG_DN"]
+    - [{t: null}, {t: null}, {t: null}, {t: null}, RET, {t: null}]
+  fn:
+    - [F12, F7, F8, F9, {t: null}, {t: null}, "C_PREV", "C_VOL_UP", "C_NEXT", {t: null}]
+    - [{t: F11, h: LCTRL}, {t: F4, h: LALT}, {t: F5, h: LGUI}, {t: F6, h: LSHFT}, {t: null}, {t: null}, "DSK_PREV", "C_VOL_DN", "DSK_NEXT", {t: null}]
+    - [F10, F1, F2, F3, {t: null}, "PIN_APP", "PIN_WIN", "DSK_MGR", {t: null}, {t: null}]
+    - [{t: null}, {t: null}, {t: null}, "C_MUTE", "C_PP", {t: null}]
+  num:
+    - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+    - [{t: CTRL}, {t: ALT}, {t: GUI}, {t: SHFT}, {t: null}, {t: null}, {t: SHFT}, {t: GUI}, {t: SHFT}, {t: CTRL}]
+    - [{t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}]
+    - [{t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}]
+  sys:
+    - ["BT1", "BT2", "BT3", "BT4", "BT_CLR", {t: null}, {t: null}, {t: null}, {t: null}, {t: null}]
+    - [{t: null}, {t: null}, {t: null}, {t: null}, BOOTLOADER, BOOTLOADER, {t: null}, {t: null}, {t: null}, {t: null}]
+    - [{t: null}, {t: null}, {t: null}, {t: null}, RESET, RESET, {t: null}, {t: null}, {t: null}, {t: null}]
+    - [{t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}]
+  mouse:
+    - [{t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}, "PG_UP", "MS_U", "PG_DN", {t: null}]
+    - ["C-Z", "C-X", "C-C", "C-V", "C-S-Z", "WH_L", "MS_L", "MS_D", "MS_R", "WH_R"]
+    - [{t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}, "LCLK", "MCLK", "RCLK", {t: null}]
+    - [{t: null}, {t: null}, {t: null}, "WH_U", "WH_D", {t: null}]
+  sym:
+    - ["!", "@", "#", "$", "%", "^", "&", "*", "_", "-"]
+    - [{t: "?", h: LCTRL}, {t: "_", h: LALT}, {t: ":", h: LGUI}, {t: "=", h: LSHFT}, "`", "-", "[", "{", "}", "]"]
+    - [{t: null}, "|", ";", "+", "~", {t: null}, {t: null}, "(", ")", {t: null}]
+    - [{t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}]
+combos:
+  - {p: [2, 3], k: ESC}
+  - {p: [1, 2], k: RET}
+  - {p: [11, 12], k: LEADER}
+  - {p: [13, 12], k: "C-X"}
+  - {p: [12, 11], k: "C-INS"}
+  - {p: [11, 10], k: "S-INS"}
+  - {p: [16, 17], k: BSPC}
+  - {p: [17, 18], k: DEL}

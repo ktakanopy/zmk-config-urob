@@ -1,0 +1,270 @@
+
+# 2024-12-17 22:26:41.155640
++n
+
+# 2024-12-17 22:27:05.203216
++/run just build zen 
+
+# 2024-12-17 22:27:10.571637
++y
+
+# 2024-12-17 22:27:12.522326
++Fix that
+
+# 2024-12-17 22:27:38.760141
++/add config/
+
+# 2024-12-17 22:27:41.368153
++zmk Justfile
+
+# 2024-12-17 22:27:42.613667
++y
+
+# 2024-12-17 22:28:38.687884
++/add Justfile
+
+# 2024-12-17 22:28:47.309892
++/run just build zen
+
+# 2024-12-17 22:28:53.163399
++y
+
+# 2024-12-17 22:28:55.380143
++Fix thaty
+
+# 2024-12-17 22:30:42.589505
++/add Justfile
+
+# 2024-12-17 22:30:46.699010
++/add config/
+
+# 2024-12-17 22:30:54.304319
++/run just build zen
+
+# 2024-12-17 22:30:57.662933
++y
+
+# 2024-12-17 22:30:58.988228
++Fix that
+
+# 2024-12-17 22:31:09.439149
++/run just build zen
+
+# 2024-12-17 22:31:09.439245
++/run just build zen
+
+# 2024-12-17 22:31:11.610357
++y
+
+# 2024-12-17 22:31:29.541534
++/run just build zen
+
+# 2024-12-17 22:31:33.215615
++y
+
+# 2024-12-17 22:31:34.896102
++Fix that
+
+# 2024-12-17 22:31:58.778303
++y
+
+# 2024-12-17 22:31:58.786416
++/run just build zen
+
+# 2024-12-17 22:31:58.786798
++/run just build zen
+
+# 2024-12-23 20:20:55.935453
++y
+
+# 2024-12-23 20:21:15.885127
++n
+
+# 2024-12-23 20:21:32.656914
++/add config/
+
+# 2024-12-23 20:22:03.748279
++consider this config/base.keymap of urob/zmk-config. Id like to create a yaml to parse in keymap-drawer
+
+# 2024-12-23 20:23:54.208916
++n
+
+# 2024-12-23 20:24:00.480684
++/add config/
+
+# 2024-12-23 20:24:12.283232
++consider this config/base.keymap of urob/zmk-config. Id like to create a yaml to parse in keymap-drawer to draw a layout from this keymap.
+
+# 2024-12-23 20:24:39.808845
++/add config/
+
+# 2024-12-23 20:24:44.863953
++consider this config/base.keymap of urob/zmk-config. Id like to create a yaml to parse in keymap-drawer to draw a layout from this keymap.
+
+# 2024-12-23 20:51:49.969374
++/add config/corne.keymap config/*.dtsi
+
+# 2024-12-23 20:52:40.775613
++/add readme.md
+
+# 2024-12-23 20:53:06.639873
++/add config/zmk-helpers-repo/README.md 
+
+# 2024-12-23 20:53:57.149525
++consider this config/base.keymap of urob/zmk-config. Id like to create a yaml to parse in keymap-drawer (https://github.com/caksoylar/keymap-drawer) to draw a layout from this keymap. generate 
+
+# 2024-12-23 20:53:59.652154
++y
+
+# 2024-12-23 20:54:39.901251
++consider this config/base.keymap of urob/zmk-config. Id like to create a yaml to parse in keymap-drawer (https://github.com/caksoylar/keymap-drawer) to draw a layout from this keymap. generate a yaml to i generate a layout image for me.
+
+# 2024-12-23 20:54:41.847576
++n
+
+# 2024-12-23 20:56:09.815033
++ls
+
+# 2024-12-23 20:56:33.787086
++/add keymap_drawer_yaml_example.yaml
+
+# 2024-12-23 20:56:36.951944
++consider this config/base.keymap of urob/zmk-config. Id like to create a yaml to parse in keymap-drawer (https://github.com/caksoylar/keymap-drawer) to draw a layout from this keymap. generate a yaml to i generate a layout image for me.
+
+# 2024-12-23 20:57:12.953690
++/add config/corne.keymap config/base.keyamp
+
+# 2024-12-23 20:57:18.068829
++yn
+
+# 2024-12-23 20:57:28.464053
++/add config/base.keymap
+
+# 2024-12-23 20:57:42.435967
++consider this config/base.keymap and config/corne.keymap of urob/zmk-config. Id like to create a yaml to parse in keymap-drawer (https://github.com/caksoylar/keymap-drawer) to draw a layout from this keymap. generate a yaml to i generate a layout image for me.
+
+# 2024-12-23 21:00:15.472628
++/add config/corne.keymap config/base.keymap config/*.dsti 
+
+# 2024-12-23 21:00:25.163501
++/add config/corne.keymap config/base.keymap config/*.dtsi
+
+# 2024-12-23 21:00:48.821088
++/add keymap_drawer_yaml_example.yaml
+
+# 2024-12-23 21:01:07.391831
++consider this config/base.keymap and config/corne.keymap of urob/zmk-config. Id like to create a yaml to parse in keymap-drawer (https://github.com/caksoylar/keymap-drawer) to draw a layout from this keymap. generate a yaml to i generate a layout image for me.
+
+# 2024-12-23 21:01:09.520552
++n
+
+# 2024-12-23 21:01:39.792557
++y
+
+# 2024-12-23 21:01:45.039135
++/run pip install keymap-drawer
+
+# 2024-12-23 21:01:45.039637
++/run pip install keymap-drawer
+
+# 2024-12-23 21:01:47.947997
++/run keymap -c keymap-drawer.yaml draw
+
+# 2024-12-23 21:01:47.948205
++/run keymap -c keymap-drawer.yaml draw
+
+# 2024-12-23 21:04:39.472196
++n
+
+# 2024-12-23 21:05:41.773245
++explain the files of the context
+
+# 2024-12-23 21:05:52.845004
++ 
+
+# 2024-12-23 21:09:40.963789
++n
+
+# 2024-12-23 21:09:58.861684
++/add config/*.keymap
+
+# 2024-12-23 21:10:07.980343
++/add config/*.dtsi
+
+# 2024-12-23 21:10:39.332084
++/add config/
+
+# 2024-12-23 21:11:18.370579
++/add draw_prompt.yml
+
+# 2024-12-23 21:11:33.216120
++n
+
+# 2024-12-23 21:11:36.951180
++/add config/
+
+# 2024-12-23 21:11:51.979920
++run he prompt in the file config/draw_prompt.txt
+
+# 2024-12-23 21:12:27.071292
++y
+
+# 2024-12-23 21:12:34.841655
++/run keymap parse -c config/keymap_drawer.yaml > keymap.yaml
+
+# 2024-12-23 21:12:34.841818
++/run keymap parse -c config/keymap_drawer.yaml > keymap.yaml
+
+# 2024-12-23 21:12:35.963081
++/run keymap draw keymap.yaml > keymap.svg
+
+# 2024-12-23 21:12:35.963238
++/run keymap draw keymap.yaml > keymap.svg
+
+# 2024-12-23 21:12:39.712526
++n
+
+# 2024-12-23 21:24:31.292179
++run he prompt in the file config/draw_prompt.txt
+
+# 2024-12-23 21:25:14.448526
++y
+
+# 2024-12-23 21:25:14.452332
++/run keymap-drawer --config config/keymap_drawer.yaml draw > keymap.svg
+
+# 2024-12-23 21:25:14.452434
++/run keymap-drawer --config config/keymap_drawer.yaml draw > keymap.svg
+
+# 2024-12-23 21:25:18.050035
++n
+
+# 2024-12-23 21:36:22.976824
++run he prompt in the file config/draw_prompt.txt 
+
+# 2024-12-23 21:57:31.686053
++nn
+
+# 2024-12-23 21:57:32.719287
++n
+
+# 2024-12-23 21:57:38.151629
++run he prompt in the file config/draw_prompt.txt 
+
+# 2024-12-23 21:58:15.681401
++y
+
+# 2024-12-23 21:58:17.331871
++n
+
+# 2024-12-24 07:24:57.530823
++run he prompt in the file config/draw_prompt.txt  
+
+# 2024-12-24 07:25:35.424548
++/run keymap-drawer draw config/layout.yaml
+
+# 2024-12-24 07:25:35.424890
++/run keymap-drawer draw config/layout.yaml
+
+# 2024-12-24 07:46:57.656859
++n
