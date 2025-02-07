@@ -15,11 +15,8 @@
 
 #define DEF 0
 #define NAV 1
-#define FN 2
-#define NUM 3
-#define SYS 4
-#define MOUSE 5
-#define SYM 6
+#define MOUSE 2
+#define SYM 3
 
 #define XXX &none
 #define ___ &trans
