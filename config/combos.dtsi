@@ -32,15 +32,15 @@
 #define COMBO_TERM_FAST 18
 #define COMBO_TERM_SLOW 30
 
-#define COMBO_IDLE_FAST 150                 36 KEY MATRIX / LAYOUT MAPPING
+#define COMBO_IDLE_FAST 150             
 #define COMBO_IDLE_SLOW 50
 
 
 ZMK_COMBO(lt,    &kp LT,       RB1 RB2,         NAV    , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(gt,    &kp GT,       RB2 RB3,         NAV    , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-ZMK_COMBO(lpar,  &lpar_lt,     RB1 RB2,     DEF     , COMBO_TERM_FAST, COMBO_IDLE_FAST, RS(LCTRL),    KEYS_L)
-ZMK_COMBO(rpar,  &rpar_gt,     RB2 RB3,     DEF     , COMBO_TERM_FAST, COMBO_IDLE_FAST, RS(LALT),     KEYS_L)
+ZMK_COMBO(lpar,  &lpar_lt,     RB1 RB2,     DEF     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(rpar,  &rpar_gt,     RB2 RB3,     DEF     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(lbkt,  &kp LBKT,     RM1 RM2,     DEF     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rbkt,  &kp RBKT,     RM2 RM3,     DEF     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
