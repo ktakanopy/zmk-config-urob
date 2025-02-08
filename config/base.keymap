@@ -8,7 +8,7 @@
 #else
     #define _BT_SEL_KEYS_ &trans &trans &trans &trans &trans
 #endif
-
+#include "zmk-helpers/key-labels/36.h"
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/greek.dtsi"
 #include "zmk-helpers/unicode-chars/german.dtsi"
@@ -53,7 +53,7 @@
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
     ZMK_HOLD_TAP(NAME, \
         flavor = "balanced"; \
-        tapping-term-ms = <280>; \
+        tapping-term-ms = <200>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
         require-prior-idle-ms = <150>; \
         bindings = <HOLD>, <TAP>; \
@@ -185,6 +185,12 @@ ZMK_HOLD_TAP(fst_lt,
     bindings = <&kp>, <&kp>;
 )
 
+ZMK_HOLD_TAP(lt_bspc,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <120>;
+    bindings = <&mo>, <&kp>;
+)
 
 
 SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &dot_spc)
@@ -239,7 +245,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &sk LCTRL     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &comma_morph  &dot_morph    &kp FSLH     &sk LCTRL
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                    &fst_lt LGUI ESC   &lt_spc NAV 0  &lt MOUSE TAB  X_MH     &lt SYM RET   SMART_NUM  SMART_SHIFT
+                                    &fst_lt LGUI ESC   &lt_spc NAV 0  &lt MOUSE TAB  X_MH     &lt_bspc SYM RET   SMART_NUM  SMART_SHIFT
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
