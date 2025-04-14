@@ -277,11 +277,11 @@ ZMK_LAYER(mouse,
 
 ZMK_LAYER(sym,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    &kp TAB    &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp DOLLAR     &kp PERCENT      X_MT   &kp CARET     &kp AMPERSAND  &kp ASTERISK    &kp UNDER    &kp MINUS      &kp BSPC
+    &kp TAB    &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp DOLLAR     &kp PERCENT  X_MT   &kp CARET     &kp AMPERSAND  &kp ASTERISK    &kp UNDER    &kp MINUS      &kp BSPC
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &sk LSHFT  &hml LCTRL QMARK &hml LALT UNDER  &hml LGUI COLON &hml LSHFT EQUAL &kp GRAVE   X_MM     &kp MINUS     &kp LBKT    &kp LBRC    &kp RBRC        &kp RBKT      &sk LSHFT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &sk LCTRL     ___           &kp PIPE           &kp SEMI        &kp PLUS  &kp TILDE        X_MB     ___           ___         &kp LPAR    &kp RPAR        ___           &sk LCTRL
+    &sk LCTRL     ___           &kp PIPE   &kp SEMI   &kp PLUS       &kp TILDE       X_MB     ___           ___         &kp LPAR    &kp RPAR        ___           &sk LCTRL
     ___                                               ___           ___             X_MH     ___            ___                                                     ___
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
@@ -292,7 +292,7 @@ ZMK_LAYER(fun,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &sk LSHFT  &kp F12      &kp F13      &kp F14        &kp F15        &kp F16        X_MM      &kp F17       &kp F18      &kp F19        &kp F20        &kp F21        &sk LSHFT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &sk LCTRL  &kp F22      &kp F23      &kp F24        &kp F25        &kp F26        X_MB      &kp F27       &kp F28      &kp F29        &kp F30       &kp F31       &sk LCTRL
+    &sk LCTRL  &kp F22      &kp F23      &kp F24        ___           ___       X_MB           ___               ___          ___            ___      ___      &sk LCTRL
                                                      &kp LGUI  &kp LALT  &kp LSHFT    X_MH      &kp LGUI    &kp LALT     &kp LSHFT 
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
