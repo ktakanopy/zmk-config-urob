@@ -119,27 +119,7 @@ ZMK_MOD_MORPH(smart_shft,
 #define SMART_NUM &smart_num NAV 0
 #define SMART_SHIFT &smart_shft
 /* vim: set ft=c tw=174: */
-ZMK_HOLD_TAP(lt_nav,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo 1>, <&kp SPACE>;  // hold = activate NAV (1), tap = SPACE
-)
 
-ZMK_HOLD_TAP(lt_fun,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo 4>, <&kp RET>;  // hold = activate FUN (4), tap = BSPC
-)
-
-
-ZMK_HOLD_TAP(lt_bspc_nav,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo 1>, <&kp SPACE>;  // hold = activate FUN (4), tap = BSPC
-)
 
 ZMK_HOLD_TAP(smart_num,
     flavor = "balanced";
@@ -327,7 +307,7 @@ ZMK_LAYER(linuxbase,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &sk LCTRL     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &comma_morph  &dot_morph    &kp FSLH     &sk LCTRL
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                    &fst_lt LCTRL ESC   lt_nav  &lt LINMOUSE TAB  X_MH     lt_fun lt_bspc_nav  SMART_SHIFT
+                                    &fst_lt LCTRL ESC   &lt NAV TAB  &lt LINMOUSE TAB  X_MH   &lt NAV RET  &lt NAV BSPC SMART_SHIFT
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
