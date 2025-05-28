@@ -186,7 +186,7 @@ ZMK_HOLD_TAP(fst_lt,
 
 // tap: esc | shift + tap/double tap: toggle nav2 | hold: lgui
 ZMK_MOD_MORPH(smart_lt,
-    bindings = <&kp LGUI>, <&toggle_nav2_morph;
+    bindings = <&kp LGUI>, <&toggle_nav2_morph>;
     mods = <(MOD_LSFT)>;
 )
 
@@ -252,7 +252,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &sk LCTRL     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &comma_morph  &dot_morph    &kp FSLH     &sk LCTRL
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                    &fst_lt LGUI ESC   &lt_spc NAV 0  &lt MOUSE TAB  X_MH     &lt_bspc FUN RET  &lt_bspc NAV BSPC  SMART_SHIFT
+                                    &smart_lt   &lt_spc NAV 0  &lt MOUSE TAB  X_MH     &lt_bspc FUN RET  &lt_bspc NAV BSPC  SMART_SHIFT
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
