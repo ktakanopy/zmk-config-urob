@@ -189,7 +189,7 @@ ZMK_HOLD_TAP(smart_lt,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&kp LGUI>, <&nav2_dance>;
+    bindings = <&kp>, <&nav2_dance>;
 )
 
 
@@ -259,7 +259,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &sk LCTRL     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &comma_morph  &dot_morph    &kp FSLH     &sk LCTRL
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                    &smart_lt   &lt_spc NAV 0  &lt MOUSE TAB  X_MH     &lt_bspc FUN RET  &lt_bspc NAV BSPC  SMART_SHIFT
+                                    &smart_lt LGUI   &lt_spc NAV 0  &lt MOUSE TAB  X_MH     &lt_bspc FUN RET  &lt_bspc NAV BSPC  SMART_SHIFT
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
