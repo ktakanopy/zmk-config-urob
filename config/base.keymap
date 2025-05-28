@@ -190,7 +190,11 @@ ZMK_MOD_MORPH(smart_lt,
     mods = <(MOD_LSFT)>;
 )
 
-SIMPLE_MORPH(toggle_nav2_morph, SFT, &kp ESC, &sl NAV2)
+ZMK_TAP_DANCE(toggle_nav2_morph,
+    tapping-term-ms = <200>;
+    bindings = <&kp ESC>, <&sl NAV2>;  // reverse this for sticky-num on single tap
+)
+
 
 ZMK_HOLD_TAP(lt_bspc,
     flavor = "balanced";
