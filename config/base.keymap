@@ -14,7 +14,7 @@
 #define MOUSE 2
 #define SYM 3
 #define FUN 4
-
+#define NAV2 5wt
 #define XXX &none
 #define ___ &trans
 
@@ -169,7 +169,7 @@ SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
 SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 
-// tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
+// tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layerc
 ZMK_HOLD_TAP(lt_spc,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -183,6 +183,14 @@ ZMK_HOLD_TAP(fst_lt,
     quick-tap-ms = <120>;
     bindings = <&kp>, <&kp>;
 )
+
+// tap: esc | shift + tap/double tap: toggle nav2 | hold: lgui
+ZMK_MOD_MORPH(smart_lt,
+    bindings = <&kp LGUI>, <&toggle_nav2_morph;
+    mods = <(MOD_LSFT)>;
+)
+
+SIMPLE_MORPH(toggle_nav2_morph, SFT, &kp ESC, &tog NAV2)
 
 ZMK_HOLD_TAP(lt_bspc,
     flavor = "balanced";
@@ -263,6 +271,7 @@ ZMK_LAYER(nav,
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
+
 //    U_WH_U        U_WH_D             
 ZMK_LAYER(mouse,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮          ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────
@@ -298,3 +307,15 @@ ZMK_LAYER(fun,
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
+ZMK_LAYER(nav2,
+
+//╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+&kp TAB      &kp LG(N1)          &kp LG(N2)      &kp LG(N3)       &kp LG(N4)   &kp LG(N5)    X_MT      &kp LG(N6)     &kp LG(N7)    &kp LG(N8)      &kp LG(N9)    &kp LG(N0)     &kp BSPC
+//├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+&sk LSHFT   &sk LCTRL        &sk LALT         &sk LGUI         &sk LSHFT     &kp LS(G)      X_MM        &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT   &caps_word    &caps_word 
+//├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+&sk LCTRL &kp LC(LS(LGUI))  &kp LC(LA(LGUI)) &kp LA(LG(LSHIFT)) &kp LG(LSHIFT) &kp INS       X_MB        &kp HOME    &kp PG_UP   &kp PG_DN       &kp END         ___  &sk LCTRL
+//├──────┤ ╰─────────────--┼────────────────┴─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
+                                                   &kp LGUI  &kp SPACE   &kp DOT    X_MH      &kp RET        &kp BSPC     &kp DEL
+//╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
+)
