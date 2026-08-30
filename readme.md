@@ -13,7 +13,7 @@ The state of the entire firmware is pinned in my `west`
 
 - ["Timeless" homerow mods](#timeless-homerow-mods)
 - Combos replace symbol layer
-- Smart numbers and mouse layers auto-toggle off
+- Smart numbers auto-toggle off
 - Unicode math and international leader key sequences
 - Simplified Devicetree syntax using helper macros from
   [zmk-helpers](https://github.com/urob/zmk-helpers)
@@ -184,7 +184,6 @@ while also making them easy to remember. Specifically:
 - <kbd>L</kbd> + <kbd>Y</kbd> switches to the Greek layer for a single key
   press, <kbd>L</kbd> + <kbd>U</kbd> + <kbd>Y</kbd> activates one-shot shift in
   addition
-- <kbd>W</kbd> + <kbd>P</kbd> activates the smart mouse layer
 
 ## Smart layers and other gimmicks
 
@@ -207,17 +206,10 @@ any of the letters on which my numpad is located (WFPRSTXCD), then the automatic
 deactivation won't work. But this is rare -- most number sequences are
 terminated by `space`, `return` or some form of punctuation/delimination. To
 deal with the rare cases where they aren't, there is a `CANCEL` key on the
-navigation-layer that deactivates Numword, Capsword and Smart-mouse. (It also
+  navigation-layer that deactivates Numword and Capsword. (It also
 toggles off when pressing `Numword` again, but I find it cognitively easier to
 have a dedicated "off-switch" than keeping track of which modes are currently
 active.)
-
-##### Smart-Mouse
-
-Similarly to Numword, I have a smart-mouse layer (activated by comboing
-<kbd>W</kbd> + <kbd>P</kbd>), which replaces the navigation cluster with scroll
-and mouse-movements, and replaces the right thumbs with mouse buttons. Pressing
-any other key automatically deactivates the layer.
 
 ##### Capsword
 
@@ -366,10 +358,15 @@ for many shells.)
 #### Drawing the keymap
 
 The build environment packages
-[keymap-drawer](https://github.com/caksoylar/keymap-drawer). `just draw` parses
-`base.keymap` and draws it to `draw/base.svg`. I haven't gotten around to
-tweaking the output yet, so for now this is just a demonstration of how to set
-things up.
+[keymap-drawer](https://github.com/caksoylar/keymap-drawer). To regenerate all
+drawings, run:
+
+```bash
+./scripts/draw-keymap.sh
+```
+
+The script parses `config/base.keymap`, generates the SVG files, and converts
+the result to `draw/keymap.png`.
 
 #### Hacking the firmware
 

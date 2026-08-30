@@ -42,6 +42,7 @@
           # pkgs.findutils        # find, xargs
           # pkgs.gnugrep          # grep
           pkgs.just               # just
+          pkgs.librsvg            # SVG to PNG conversion
           # pkgs.gnused           # sed
           pkgs.yq                 # yq
         ];
