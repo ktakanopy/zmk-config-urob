@@ -40,7 +40,7 @@ layers:
     - {t: ESC, h: LGUI}
     - {t: SPACE, h: NAV}
     - {t: TAB, h: ONE_HAND}
-    - {t: RET, h: NAV}
+    - {t: RET, h: FUN}
     - {t: BSPC, h: NUM}
     - LCTRL
 
@@ -90,23 +90,23 @@ layers:
 
   nav:
     - GRAVE
-    - HOME
-    - PG_UP
-    - PG_DN
-    - END
-    - ''
-    - ''
+    - TMUX_PREV_WINDOW
+    - TMUX_NEXT_WINDOW
+    - TMUX_LAST_WINDOW
+    - TMUX_CHOOSE_WINDOW
+    - TMUX_NEW_WINDOW
+    - TMUX_JOIN_PREV_WINDOW
     - WH_U
     - WH_D
+    - TMUX_COPY_MODE
+    - TMUX_PASTE_BUFFER
+    - TMUX_CHOOSE_PANE
     - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
+    - {t: LALT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - {t: LALT, h: sticky}
+    - {t: LGUI, h: sticky}
+    - {t: LSHFT, h: sticky}
     - LEFT
     - DOWN
     - UP
@@ -115,11 +115,11 @@ layers:
     - ''
     - ''
     - {t: LCTRL, h: sticky}
-    - {t: LALT, h: sticky}
-    - {t: LGUI, h: sticky}
-    - {t: LSHFT, h: sticky}
-    - ''
-    - ''
+    - TMUX_ZOOM
+    - TMUX_SPLIT_H
+    - TMUX_SPLIT_V
+    - TMUX_BREAK_PANE
+    - TMUX_PREV_PANE
     - HOME
     - PG_UP
     - PG_DN
@@ -176,6 +176,50 @@ layers:
     - BSPC
     - DEL
 
+  fun:
+    - ''
+    - F1
+    - F2
+    - F3
+    - F4
+    - F5
+    - F6
+    - F7
+    - F8
+    - F9
+    - F10
+    - ''
+    - ''
+    - F11
+    - F12
+    - PREV
+    - PLAY_PAUSE
+    - NEXT
+    - VOL_DN
+    - MUTE
+    - VOL_UP
+    - SCREEN_RECORD
+    - SCREEN_SELECTION
+    - ''
+    - ''
+    - SCREEN_COPY
+    - SCREEN_SELECTION_COPY
+    - ''
+    - ''
+    - ''
+    - SCREEN_FULL
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+
 combos:
   - {p: [31, 32], k: LT, l: [num]}
   - {p: [32, 33], k: GT, l: [num]}
@@ -189,7 +233,7 @@ combos:
   - {p: [7, 8], k: LS(RET), l: [base, num]}
   - {p: [8, 9], k: TILDE_SPACE, l: [base, num]}
   - {p: [14, 15], k: LC(SPACE), l: [base, num]}
-  - {p: [16, 15], k: COLON, l: [base, num]}
+  - {p: [16, 15], k: LG(K), l: [base]}
   - {p: [2, 15], k: EXCL, l: [base, num]}
   - {p: [2, 14], k: AT, l: [base, num]}
   - {p: [3, 15], k: HASH, l: [base, num]}
