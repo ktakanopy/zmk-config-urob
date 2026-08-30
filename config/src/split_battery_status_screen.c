@@ -34,9 +34,9 @@ static void update_battery_label(struct split_battery_state state) {
     char text[18];
 
     if (state.right_connected) {
-        snprintf(text, sizeof(text), "L %3u%%\\nR %3u%%", state.left, state.right);
+        snprintf(text, sizeof(text), "L %3u%%\nR %3u%%", state.left, state.right);
     } else {
-        snprintf(text, sizeof(text), "L %3u%%\\nR  --", state.left);
+        snprintf(text, sizeof(text), "L %3u%%\nR  --", state.left);
     }
 
     lv_label_set_text(battery_label, text);
