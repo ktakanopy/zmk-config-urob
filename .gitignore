@@ -5,6 +5,9 @@
 modules
 firmware
 zephyr
+!zephyr/
+zephyr/*
+!zephyr/module.yml
 zmk
 # Ignore keymap-drawer output for now
 draw/base.svg
