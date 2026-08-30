@@ -1,48 +1,300 @@
-layout:
-  qmk_keyboard: corne
-  split: true
+layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
   base:
-    - [Q, W, E, R, T, Y, U, I, O, P]
-    - [{t: A, h: LCTRL}, {t: S, h: LALT}, {t: D, h: LGUI}, {t: F, h: LSHFT}, G, H, {t: J, h: RSHFT}, {t: K, h: RGUI}, {t: L, h: RALT}, {t: "'", h: RCTRL}]
-    - [Z, X, C, V, B, N, M, {t: ",", h: comma_morph}, {t: ".", h: dot_morph}, "/"]
-    - [{t: ESC, h: LGUI}, {t: SPACE, h: NAV}, {t: TAB, h: MOUSE}, {t: SYM}, {t: NUM}, {t: SHFT}]
+    - TAB
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - BSPC
+    - CAPS
+    - {t: A, h: LCTRL}
+    - {t: S, h: LALT}
+    - {t: D, h: LGUI}
+    - {t: F, h: LSHFT}
+    - G
+    - H
+    - {t: J, h: RSHFT}
+    - {t: K, h: RGUI}
+    - {t: L, h: RALT}
+    - {t: ";", h: RCTRL}
+    - "'"
+    - {t: LSHFT, h: sticky}
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - N
+    - M
+    - {t: ",", h: comma_morph}
+    - {t: ".", h: dot_morph}
+    - "/"
+    - {t: RSHFT, h: sticky}
+    - {t: ESC, h: LGUI}
+    - {t: SPACE, h: NAV}
+    - {t: TAB, h: MOUSE}
+    - {t: RET, h: FUN}
+    - {t: BSPC, h: NAV}
+    - SMART_SHIFT
+
   nav:
-    - [{t: "`", h: LG}, {t: null}, {t: "S-TAB"}, {t: "ALT-TAB"}, {t: null}, {t: null}, {t: null}, {t: "BSPC"}, {t: "DEL"}, {t: null}]
-    - [{t: CTRL}, {t: "←", h: LALT}, {t: "→", h: LGUI}, {t: "SPACE", h: LSHFT}, {t: null}, LEFT, DOWN, UP, RIGHT, {t: null}]
-    - [{t: null}, {t: null}, {t: "RET"}, {t: "S-RET"}, {t: null}, INS, HOME, END, "PG_UP", "PG_DN"]
-    - [{t: null}, {t: null}, {t: null}, {t: null}, RET, {t: null}]
-  fn:
-    - [F12, F7, F8, F9, {t: null}, {t: null}, "C_PREV", "C_VOL_UP", "C_NEXT", {t: null}]
-    - [{t: F11, h: LCTRL}, {t: F4, h: LALT}, {t: F5, h: LGUI}, {t: F6, h: LSHFT}, {t: null}, {t: null}, "DSK_PREV", "C_VOL_DN", "DSK_NEXT", {t: null}]
-    - [F10, F1, F2, F3, {t: null}, "PIN_APP", "PIN_WIN", "DSK_MGR", {t: null}, {t: null}]
-    - [{t: null}, {t: null}, {t: null}, "C_MUTE", "C_PP", {t: null}]
-  num:
-    - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-    - [{t: CTRL}, {t: ALT}, {t: GUI}, {t: SHFT}, {t: null}, {t: null}, {t: SHFT}, {t: GUI}, {t: SHFT}, {t: CTRL}]
-    - [{t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}]
-    - [{t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}]
-  sys:
-    - ["BT1", "BT2", "BT3", "BT4", "BT_CLR", {t: null}, {t: null}, {t: null}, {t: null}, {t: null}]
-    - [{t: null}, {t: null}, {t: null}, {t: null}, BOOTLOADER, BOOTLOADER, {t: null}, {t: null}, {t: null}, {t: null}]
-    - [{t: null}, {t: null}, {t: null}, {t: null}, RESET, RESET, {t: null}, {t: null}, {t: null}, {t: null}]
-    - [{t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}]
+    - TAB
+    - N1
+    - N2
+    - N3
+    - N4
+    - N5
+    - N6
+    - N7
+    - N8
+    - N9
+    - N0
+    - BSPC
+    - {t: LSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - {t: LALT, h: sticky}
+    - {t: LGUI, h: sticky}
+    - {t: LSHFT, h: sticky}
+    - LS(G)
+    - LEFT
+    - DOWN
+    - UP
+    - RIGHT
+    - CAPS_WORD
+    - CAPS_WORD
+    - {t: LCTRL, h: sticky}
+    - LC(LS(LGUI))
+    - LC(LA(LGUI))
+    - LA(LG(LSHIFT))
+    - LG(LSHIFT)
+    - INS
+    - HOME
+    - PG_UP
+    - PG_DN
+    - END
+    - {t: "▽", type: trans}
+    - {t: LCTRL, h: sticky}
+    - LGUI
+    - SPACE
+    - DOT
+    - RET
+    - BSPC
+    - DEL
+
   mouse:
-    - [{t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}, "PG_UP", "MS_U", "PG_DN", {t: null}]
-    - ["C-Z", "C-X", "C-C", "C-V", "C-S-Z", "WH_L", "MS_L", "MS_D", "MS_R", "WH_R"]
-    - [{t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}, "LCLK", "MCLK", "RCLK", {t: null}]
-    - [{t: null}, {t: null}, {t: null}, "WH_U", "WH_D", {t: null}]
+    - TAB
+    - LG(GRAVE)
+    - LG(LBRC)
+    - LG(RBRC)
+    - BSPC
+    - LS(RET)
+    - LG(LS(N4))
+    - PG_UP
+    - MOVE_UP
+    - PG_DN
+    - CAPS
+    - BSPC
+    - {t: LSHFT, h: sticky}
+    - LG(Z)
+    - LG(X)
+    - LG(C)
+    - LG(V)
+    - LG(LS(Z))
+    - WH_L
+    - MOVE_LEFT
+    - MOVE_DOWN
+    - MOVE_RIGHT
+    - WH_R
+    - {t: LSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - {t: "▽", type: trans}
+    - LS(RET)
+    - LG(RET)
+    - LC(LG(LS(N3)))
+    - {t: "▽", type: trans}
+    - LG(LS(N5))
+    - WH_D
+    - WH_U
+    - {t: "▽", type: trans}
+    - CAPS
+    - {t: LCTRL, h: sticky}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - LCLK
+    - MCLK
+    - RCLK
+
   sym:
-    - ["!", "@", "#", "$", "%", "^", "&", "*", "_", "-"]
-    - [{t: "?", h: LCTRL}, {t: "_", h: LALT}, {t: ":", h: LGUI}, {t: "=", h: LSHFT}, "`", "-", "[", "{", "}", "]"]
-    - [{t: null}, "|", ";", "+", "~", {t: null}, {t: null}, "(", ")", {t: null}]
-    - [{t: null}, {t: null}, {t: null}, {t: null}, {t: null}, {t: null}]
+    - TAB
+    - "!"
+    - "@"
+    - "#"
+    - "$"
+    - "%"
+    - "^"
+    - "&"
+    - "*"
+    - "_"
+    - "-"
+    - BSPC
+    - {t: LSHFT, h: sticky}
+    - {t: QMARK, h: LCTRL}
+    - {t: UNDER, h: LALT}
+    - {t: COLON, h: LGUI}
+    - {t: EQUAL, h: LSHFT}
+    - GRAVE
+    - MINUS
+    - LBKT
+    - LBRC
+    - RBRC
+    - RBKT
+    - {t: LSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - {t: "▽", type: trans}
+    - PIPE
+    - SEMI
+    - PLUS
+    - TILDE
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - LPAR
+    - RPAR
+    - {t: "▽", type: trans}
+    - {t: LCTRL, h: sticky}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+
+  fun:
+    - TAB
+    - F1
+    - F2
+    - F3
+    - F4
+    - F5
+    - F6
+    - F7
+    - F8
+    - F9
+    - F10
+    - BSPC
+    - {t: LSHFT, h: sticky}
+    - F12
+    - F13
+    - F14
+    - F15
+    - F16
+    - MINUS
+    - LBKT
+    - LBRC
+    - RBRC
+    - RBKT
+    - {t: LSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - F22
+    - F23
+    - F24
+    - {t: "▽", type: trans}
+    - {t: "▽", type: trans}
+    - BT1
+    - BT2
+    - BT3
+    - BT4
+    - BT_CLR
+    - {t: LCTRL, h: sticky}
+    - LGUI
+    - LALT
+    - LSHFT
+    - LGUI
+    - LALT
+    - LSHFT
+
+  nav2:
+    - TAB
+    - LG(N1)
+    - LG(N2)
+    - LG(N3)
+    - LG(N4)
+    - LG(N5)
+    - LG(N6)
+    - LG(N7)
+    - LG(N8)
+    - LG(N9)
+    - LG(N0)
+    - BSPC
+    - {t: LSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - {t: LALT, h: sticky}
+    - {t: LGUI, h: sticky}
+    - {t: LSHFT, h: sticky}
+    - LS(G)
+    - LEFT
+    - DOWN
+    - UP
+    - RIGHT
+    - CAPS_WORD
+    - CAPS_WORD
+    - {t: LCTRL, h: sticky}
+    - LC(LS(LGUI))
+    - LC(LA(LGUI))
+    - LA(LG(LSHIFT))
+    - LG(LSHIFT)
+    - INS
+    - HOME
+    - PG_UP
+    - PG_DN
+    - END
+    - {t: "▽", type: trans}
+    - {t: LCTRL, h: sticky}
+    - LGUI
+    - SPACE
+    - DOT
+    - RET
+    - BSPC
+    - DEL
+
 combos:
-  - {p: [2, 3], k: ESC}
-  - {p: [1, 2], k: RET}
-  - {p: [11, 12], k: LEADER}
-  - {p: [13, 12], k: "C-X"}
-  - {p: [12, 11], k: "C-INS"}
-  - {p: [11, 10], k: "S-INS"}
-  - {p: [16, 17], k: BSPC}
-  - {p: [17, 18], k: DEL}
+  - {p: [31, 32], k: LT, l: [nav]}
+  - {p: [32, 33], k: GT, l: [nav]}
+  - {p: [31, 32], k: "(", l: [base]}
+  - {p: [32, 33], k: ")", l: [base]}
+  - {p: [19, 20], k: "[", l: [base]}
+  - {p: [20, 21], k: "]", l: [base]}
+  - {p: [19, 20], k: "{", l: [nav]}
+  - {p: [20, 21], k: "}", l: [nav]}
+  - {p: [15, 28], k: BSLH, l: [base, nav]}
+  - {p: [7, 8], k: LS(RET), l: [base, nav]}
+  - {p: [8, 9], k: TILDE_SPACE, l: [base, nav]}
+  - {p: [14, 15], k: LC(SPACE), l: [base, nav]}
+  - {p: [16, 15], k: COLON, l: [base, nav]}
+  - {p: [2, 15], k: EXCL, l: [base, nav]}
+  - {p: [2, 14], k: AT, l: [base, nav]}
+  - {p: [3, 15], k: HASH, l: [base, nav]}
+  - {p: [4, 16], k: DOLLAR, l: [base, nav]}
+  - {p: [5, 17], k: PERCENT, l: [base, nav]}
+  - {p: [6, 18], k: CARET, l: [base, nav]}
+  - {p: [7, 19], k: AMPERSAND, l: [base, nav]}
+  - {p: [8, 20], k: ASTERISK, l: [base, nav]}
+  - {p: [4, 3], k: UNDER, l: [base, nav]}
+  - {p: [15, 27], k: MINUS, l: [base, nav]}
+  - {p: [2, 3], k: QMARK, l: [base, nav]}
+  - {p: [28, 27], k: EQUAL, l: [base, nav]}
+  - {p: [16, 3], k: GRAVE, l: [base, nav]}
+  - {p: [18, 30], k: PIPE, l: [base, nav]}
+  - {p: [27, 26], k: SEMI, l: [base, nav]}
+  - {p: [16, 15], k: SEMI, l: [base, nav]}
+  - {p: [16, 28], k: PLUS, l: [base, nav]}
+  - {p: [19, 31], k: TILDE, l: [base, nav]}
+  - {p: [19, 8], k: QTSPC, l: [base, nav]}
+  - {p: [20, 31], k: FSLH, l: [base, nav]}

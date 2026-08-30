@@ -255,9 +255,9 @@ ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     &kp TAB     &kp Q         &kp W         &kp E         &kp R         &kp T        X_MT     &kp Y       &kp U         &kp I         &kp O         &kp P          &kp BSPC
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &sk LSHFT     &hml LCTRL A  &hml LALT S   &hml LGUI D   &hml LSHFT F  &kp G      X_MM     &kp H     &hmr LSHFT J  &hmr LGUI K   &hmr LALT L   &hmr LCTRL SQT   &sk LSHFT
+    &kp CAPS      &hml LCTRL A  &hml LALT S   &hml LGUI D   &hml LSHFT F  &kp G      X_MM     &kp H     &hmr LSHFT J  &hmr LGUI K   &hmr LALT L   &hmr LCTRL SEMI  &kp SQT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &sk LCTRL     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &comma_morph  &dot_morph    &kp FSLH     &sk LCTRL
+    &sk LSHFT     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &comma_morph  &dot_morph    &kp FSLH     &sk LSHFT
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
                                     &smart_lt LGUI 0   &lt_spc NAV 0  &lt MOUSE TAB  X_MH     &lt_bspc FUN RET  &lt_bspc NAV BSPC  SMART_SHIFT
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
