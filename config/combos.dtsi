@@ -25,8 +25,8 @@
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
-ZMK_COMBO(lt,    &kp LT,       RB1 RB2,         NUM    , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(gt,    &kp GT,       RB2 RB3,         NUM    , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(lt,    &kp LT,       RB1 RB2,         NUM NAV, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(gt,    &kp GT,       RB2 RB3,         NUM NAV, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(lpar,  &lpar_lt,     RB1 RB2,     DEF     , COMBO_TERM_FAST, COMBO_IDLE_FAST, RS(LCTRL),    KEYS_L)
 ZMK_COMBO(rpar,  &rpar_gt,     RB2 RB3,     DEF     , COMBO_TERM_FAST, COMBO_IDLE_FAST, RS(LALT),     KEYS_L)
@@ -34,8 +34,8 @@ ZMK_COMBO(rpar,  &rpar_gt,     RB2 RB3,     DEF     , COMBO_TERM_FAST, COMBO_IDL
 ZMK_COMBO(lbkt,  &kp LBKT,     RM1 RM2,     DEF     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rbkt,  &kp RBKT,     RM2 RM3,     DEF     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-ZMK_COMBO(lbrc,  &kp LBRC,     RM1 RM2,         NUM    , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(rbrc,  &kp RBRC,     RM2 RM3,         NUM    , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(lbrc,  &kp LBRC,     RM1 RM2,         NUM NAV, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(rbrc,  &kp RBRC,     RM2 RM3,         NUM NAV, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Vertical combos - left hand */
 ZMK_COMBO(bslh,  &kp BSLH,     LM2 LB1,     DEF NUM , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
