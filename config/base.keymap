@@ -319,11 +319,11 @@ ZMK_LAYER(num,
 
 
 //╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-&kp GRAVE        &kp EXCLAMATION &kp AT_SIGN     &kp HASH        &kp DOLLAR    &kp PERCENT   X_MT           &kp CARET     &kp AMPERSAND &kp ASTERISK &kp LPAR      &kp RPAR        XXX
+&kp GRAVE        &kp EXCLAMATION &kp AT_SIGN     &kp HASH        &kp DOLLAR    &kp PERCENT   X_MT           &kp CARET     &kp AMPERSAND &kp ASTERISK &kp LPAR      &kp RPAR        &kp LBKT
 //├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-&sk LALT      &kp N1          &kp N2           &kp N3          &kp N4        &kp N5        X_MM           &kp N6        &kp N7        &kp N8       &kp N9       &kp N0         XXX
+&sk LALT      &kp N1          &kp N2           &kp N3          &kp N4        &kp N5        X_MM           &kp N6        &kp N7        &kp N8       &kp N9       &kp N0         &kp RBKT
 //├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-&sk LCTRL           &sk LCTRL       &sk LALT       &sk LGUI       &sk LSHFT     &g_           X_MB           &sk RSHFT    &sk RGUI      &sk RALT      &sk RCTRL     XXX        &sk RSHFT  
+&sk LCTRL           &sk LCTRL       &sk LALT       &sk LGUI       &sk LSHFT     &g_           X_MB           &sk RSHFT    &sk RGUI      &sk RALT      &sk RCTRL     &caps_word        &sk RSHFT  
 //├──────┤ ╰─────────────--┼────────────────┴─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                                    &kp LGUI  &kp SPACE   &kp DOT    X_MH      &kp RET        &kp BSPC     &kp DEL
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
@@ -357,7 +357,7 @@ ZMK_LAYER(one_hand,
 
 ZMK_LAYER(fun,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    XXX         &kp F1        &kp F2        &kp F3          &kp F4          &kp F5       X_MT     &kp F6       &kp F7          &kp F8          &kp F9          &kp F10         XXX
+    &kp CAPS    &kp F1        &kp F2        &kp F3          &kp F4          &kp F5       X_MT     &kp F6       &kp F7          &kp F8          &kp F9          &kp F10         XXX
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     XXX         &kp F11       &kp F12       &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT   X_MM     &kp C_VOL_DN &kp C_MUTE     &kp C_VOL_UP   &kp LG(LS(N5)) &kp LG(LS(N4)) XXX
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
