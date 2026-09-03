@@ -13,7 +13,7 @@ thumbs.
 12 LALT  13 A   14 S   15 D   16 F   17 G    18 H   19 J   20 K   21 L   22 ;   23 '
 24 LSHFT 25 Z   26 X   27 C   28 V   29 B    30 N   31 M   32 ,   33 .   34 /   35 LSHFT
 
-                              36 ESC/LGUI   37 SPACE/NAV   38 TAB/ONE_HAND   39 RET/NAV   40 BSPC/NUM   41 LCTRL
+                              36 ESC/LGUI   37 SPACE/NAV   38 TAB/LCTRL      39 RET/FUN   40 BSPC/NUM   41 SMART_SHIFT
 ```
 
 ## Camada `num`

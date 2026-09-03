@@ -139,20 +139,20 @@ layers:
     - PG_DN
     - END
     - DEL
-    - ''
-    - ''
-    - ''
+    - SCREEN_RECORD
+    - SCREEN_SELECTION
+    - SCREEN_FULL
     - ''
     - ''
     - ''
     - {t: LCTRL, h: sticky}
-    - RET
+    - ''
     - BSPC
+    - RET
     - DEL
-    - TAB
-    - ESC
     - ''
-    - ''
+    - SCREEN_COPY
+    - SCREEN_SELECTION_COPY
     - ''
     - ''
     - ''
