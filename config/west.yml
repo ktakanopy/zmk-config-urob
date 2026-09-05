@@ -19,7 +19,7 @@
 manifest:
   defaults:
     remote: urob
-    revision: v0.1 # Pin everything to v0.1
+    revision: v0.3 # Pin Urob modules to the latest stable release
 
   remotes:
     - name: urob
@@ -28,10 +28,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
 
   projects:
-    # This is vanilla ZMK - just using my remote to pin the current state of main,
-    # as upstream hasn't yet released a version with mouse.
+    # Latest stable upstream ZMK release.
     - name: zmk
-      revision: v0.1+mouse
+      remote: zmkfirmware
+      revision: v0.3.0
       import: app/west.yml
 
     # ZMK modules
@@ -42,7 +42,6 @@ manifest:
     - name: zmk-helpers
       path: modules/zmk/helpers
     - name: zmk-leader-key
-      revision: v0.1+locality
       path: modules/zmk/leader-key
     - name: zmk-tri-state
       path: modules/zmk/tri-state
@@ -50,6 +49,7 @@ manifest:
     # Temporarily overload Zephyr until
     # https://github.com/zmkfirmware/zephyr/pull/40 is merged.
     - name: zephyr
+      remote: zmkfirmware
       revision: v3.5.0+zmk-fixes
       clone-depth: 1
       import:
