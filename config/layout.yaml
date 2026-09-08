@@ -96,9 +96,9 @@ layers:
     - TMUX_CHOOSE_WINDOW
     - TMUX_NEW_WINDOW
     - TMUX_JOIN_PREV_WINDOW
-    - WH_U
-    - WH_D
-    - TMUX_COPY_MODE
+    - ''
+    - ''
+    - ''
     - TMUX_PASTE_BUFFER
     - TMUX_CHOOSE_PANE
     - ''
@@ -107,6 +107,7 @@ layers:
     - {t: LALT, h: sticky}
     - {t: LGUI, h: sticky}
     - {t: LSHFT, h: sticky}
+    - TMUX_COPY_MODE
     - LEFT
     - DOWN
     - UP

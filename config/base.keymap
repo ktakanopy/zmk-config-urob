@@ -290,9 +290,9 @@ ZMK_LAYER(num,
 ZMK_LAYER(nav,
 
 //╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-&kp LG(GRAVE) &tmux_prev_window &tmux_next_window &tmux_last_window &tmux_choose_window &tmux_new_window X_MT &tmux_join_previous_window U_WH_U U_WH_D &tmux_copy_mode &tmux_paste_buffer &tmux_choose_pane
+&kp LG(GRAVE) &tmux_prev_window &tmux_next_window &tmux_last_window &tmux_choose_window &tmux_new_window X_MT &tmux_join_previous_window XXX     XXX     XXX           &tmux_paste_buffer &tmux_choose_pane
 //├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-&sk LALT           &sk LCTRL       &sk LALT       &sk LGUI       &sk LSHFT     XXX            X_MM           &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT     XXX           XXX
+&sk LALT           &sk LCTRL       &sk LALT       &sk LGUI       &sk LSHFT     &tmux_copy_mode X_MM           &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT     XXX           XXX
 //├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
 &sk LCTRL          &tmux_zoom_pane &tmux_split_horizontal &tmux_split_vertical &tmux_break_pane &tmux_prev_pane X_MB &kp HOME &kp PG_UP &kp PG_DN &kp END XXX XXX
 //├──────┤ ╰─────────────--┼────────────────┴─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
