@@ -6,6 +6,20 @@ parse_config:
     "&alt_caps": {t: LALT, h: 2x CAPS}
     "&tab_cmd_tab": {t: TAB, h: 2x LG(TAB)}
     "&swapper": {t: LALT, h: TAB cycle}
+    "&tmux_prev_window": {t: PREV WIN, h: TMUX}
+    "&tmux_next_window": {t: NEXT WIN, h: TMUX}
+    "&tmux_last_window": {t: LAST WIN, h: TMUX}
+    "&tmux_choose_window": {t: CHOOSE WIN, h: TMUX}
+    "&tmux_new_window": {t: NEW WIN, h: TMUX}
+    "&tmux_join_previous_window": {t: JOIN WIN, h: TMUX}
+    "&tmux_copy_mode": {t: COPY MODE, h: TMUX}
+    "&tmux_paste_buffer": {t: PASTE, h: TMUX}
+    "&tmux_choose_pane": {t: CHOOSE PANE, h: TMUX}
+    "&tmux_zoom_pane": {t: ZOOM, h: TMUX}
+    "&tmux_split_horizontal": {t: SPLIT H, h: TMUX}
+    "&tmux_split_vertical": {t: SPLIT V, h: TMUX}
+    "&tmux_break_pane": {t: BREAK PANE, h: TMUX}
+    "&tmux_prev_pane": {t: PREV PANE, h: TMUX}
 
 draw_config:
   footer_text: "urob/zmk-config"

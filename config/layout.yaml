@@ -42,7 +42,7 @@ layers:
     - {t: DEL, h: NAV2}
     - {t: RET, h: FUN}
     - {t: BSPC, h: NUM}
-    - {t: LSHFT, s: CAPS_WORD}
+    - {t: LSHFT, h: sticky}
 
   num:
     - LG(GRAVE)
@@ -226,6 +226,7 @@ layers:
     - LG(LS(LBKT))
     - LG(LS(RBKT))
     - LA(SPACE)
+    - C_AC_BACK
     - ''
     - ''
     - ''
@@ -238,7 +239,7 @@ layers:
     - BSPC
     - RET
     - DEL
-    - ''
+    - C_AC_FORWARD
     - MOUSE_LEFT
     - MOUSE_DOWN
     - MOUSE_UP
@@ -247,8 +248,8 @@ layers:
     - ''
     - ''
     - ''
-    - C_AC_BACK
-    - C_AC_FORWARD
+    - ''
+    - ''
     - ''
     - ''
     - ''
@@ -256,9 +257,9 @@ layers:
     - SCROLL_DOWN
     - SCROLL_UP
     - SCROLL_RIGHT
-    - ''
-    - ''
-    - ''
+    - LGUI
+    - SPACE
+    - LALT
     - ''
     - ''
     - LCLK

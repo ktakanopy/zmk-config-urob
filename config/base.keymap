@@ -100,18 +100,6 @@ ZMK_HOLD_TAP(mt_end, bindings = <&masked_end>, <&kp>; MT_CORE)
 MASK_MODS(masked_home, (MOD_LCTL), &kp HOME)
 MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
 
-/* Caps-word and smart-shift */
-
-// hold: shift | shift + tap: caps-word
-ZMK_MOD_MORPH(smart_shft,
-    bindings = <&kp LSHFT>, <&caps_word>;
-    mods = <(MOD_LSFT)>;
-)
-&caps_word {  // mods deactivate caps-word, requires PR #1451
-    /delete-property/ ignore-modifiers;
-};
-
-#define SMART_SHIFT &smart_shft
 /* vim: set ft=c tw=174: */
 
 /* Custom behaviors */
@@ -280,7 +268,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &kp LCTRL     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &kp COMMA     &kp DOT       &kp FSLH     &kp LCTRL
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                    &esc_lgui LGUI ESC    &lt NAV SPACE       &lt NAV2 DEL     X_MH     &lt FUN RET      &lt NUM BSPC  SMART_SHIFT
+                                    &esc_lgui LGUI ESC    &lt NAV SPACE       &lt NAV2 DEL     X_MH     &lt FUN RET      &lt NUM BSPC  &sk LSHFT
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
@@ -340,12 +328,12 @@ ZMK_LAYER(fun,
 ZMK_LAYER(nav2,
 
 //╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-&swapper    &kp LG(SPACE)    &kp LG(LS(LBKT)) &kp LG(LS(RBKT)) &kp LA(SPACE)    XXX            X_MT     XXX           XXX          XXX          XXX          XXX          XXX
+&swapper    &kp LG(SPACE)    &kp LG(LS(LBKT)) &kp LG(LS(RBKT)) &kp LA(SPACE)    &kp C_AC_BACK X_MT     XXX           XXX          XXX          XXX          XXX          XXX
 //├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-XXX         XXX              &kp BSPC        &kp RET         &kp DEL         XXX            X_MM     U_MS_L        U_MS_D       U_MS_U       U_MS_R       XXX           XXX
+XXX         XXX              &kp BSPC        &kp RET         &kp DEL         &kp C_AC_FORWARD X_MM     U_MS_L        U_MS_D       U_MS_U       U_MS_R       XXX           XXX
 //├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-XXX         XXX              &kp C_AC_BACK    &kp C_AC_FORWARD XXX             XXX            X_MB     U_WH_L        U_WH_D       U_WH_U       U_WH_R       XXX           XXX
+XXX         XXX              XXX              XXX              XXX             XXX            X_MB     U_WH_L        U_WH_D       U_WH_U       U_WH_R       XXX           XXX
 //├──────┤ ╰─────────────--┼────────────────┴─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                                   XXX       XXX         XXX      X_MH     &mkp LCLK   &mkp RCLK    &mkp MCLK
+                                                   &kp LGUI &kp SPACE     &kp LALT  X_MH     &mkp LCLK   &mkp RCLK    &mkp MCLK
 //╰──────╯                                           ╰─────────────┴─────────────┴─────────────╯          ╰─────────────┴─────────────┴─────────────╯
 )
