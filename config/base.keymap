@@ -128,6 +128,11 @@ ZMK_TAP_DANCE(alt_caps,
     bindings = <&kp LALT>, <&kp CAPS>;
 )
 
+ZMK_TAP_DANCE(shift_caps_word,
+    tapping-term-ms = <200>;
+    bindings = <&sk LSHFT>, <&caps_word>;
+)
+
 ZMK_HOLD_TAP(fst_lt,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -253,7 +258,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &kp LCTRL     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &kp COMMA     &kp DOT       &kp FSLH     &kp LCTRL
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                    &kp LGUI              &lt NAV SPACE       &lt NAV2 DEL     X_MH     &lt FUN RET      &lt NUM BSPC  &sk LSHFT
+                                    &kp LGUI              &lt NAV SPACE       &lt NAV2 DEL     X_MH     &lt FUN RET      &lt NUM BSPC  &shift_caps_word
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
@@ -300,7 +305,7 @@ ZMK_LAYER(fun,
 ZMK_LAYER(nav2,
 
 //╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-&swapper    &kp LG(SPACE)    &kp LG(LS(LBKT)) &kp LG(LS(RBKT)) &kp LA(SPACE)    XXX           X_MT     XXX           XXX          XXX          XXX          XXX          XXX
+&swapper    &kp LG(SPACE)    &kp LG(LS(LBKT)) &kp LG(LS(RBKT)) &kp LA(SPACE)    &kp ESC       X_MT     XXX           XXX          XXX          XXX          XXX          XXX
 //├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
 &sk LALT    &kp BSPC         &kp LS(RET)     &kp LC(RET)     &kp RET         &kp DEL          X_MM     U_MS_L        U_MS_D       U_MS_U       U_MS_R       XXX           XXX
 //├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
