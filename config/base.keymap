@@ -102,9 +102,9 @@ MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
 
 /* Caps-word and smart-shift */
 
-// tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
+// hold: shift | shift + tap: caps-word
 ZMK_MOD_MORPH(smart_shft,
-    bindings = <&sk LSHFT>, <&caps_word>;
+    bindings = <&kp LSHFT>, <&caps_word>;
     mods = <(MOD_LSFT)>;
 )
 &caps_word {  // mods deactivate caps-word, requires PR #1451
@@ -119,7 +119,6 @@ ZMK_MOD_MORPH(smart_shft,
 // Alt+Tab swapper, requires PR #1366
 ZMK_TRI_STATE(swapper,
     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <LT2>;
 )
 
 // reuse basic mod-morph scheme
@@ -330,9 +329,9 @@ ZMK_LAYER(fun,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     &kp CAPS    &kp F1        &kp F2        &kp F3          &kp F4          &kp F5       X_MT     &kp F6       &kp F7          &kp F8          &kp F9          &kp F10         XXX
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    XXX         &kp F11       &kp F12       &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT   X_MM     &kp C_VOL_DN &kp C_MUTE     &kp C_VOL_UP   &kp LG(LS(N5)) &kp LG(LS(N4)) XXX
+    XXX         &kp F11       &kp F12       &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT   X_MM     &kp C_VOL_DN &kp C_MUTE     &kp C_VOL_UP   XXX           XXX           XXX
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &kp LG(LS(N3)) &kp LC(LG(LS(N3))) &kp LC(LG(LS(N4))) XXX          XXX          XXX         X_MB     _BT_SEL_KEYS_ XXX
+    XXX         &kp LC(LG(LS(N1))) &kp LC(LG(LS(N2))) &kp LC(LG(LS(N3))) &kp LC(LG(LS(N4))) &kp LC(LG(LS(N5))) X_MB     _BT_SEL_KEYS_ XXX
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                                    &kp LGUI  &kp SPACE   &kp LALT   X_MH      &kp RET        &kp BSPC     &kp DEL
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯
@@ -341,12 +340,12 @@ ZMK_LAYER(fun,
 ZMK_LAYER(nav2,
 
 //╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-&kp LG(GRAVE) &tmux_prev_window &tmux_next_window &tmux_last_window &tmux_choose_window &tmux_new_window X_MT &tmux_join_previous_window U_WH_U U_WH_D &tmux_copy_mode &tmux_paste_buffer &tmux_choose_pane
+&swapper    XXX              XXX              XXX              XXX              XXX            X_MT     XXX           XXX          XXX          XXX          XXX          XXX
 //├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-&sk LALT           &sk LCTRL       &sk LALT       &sk LGUI       &sk LSHFT     XXX            X_MM           &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT     XXX           XXX
+XXX         XXX              XXX              XXX              XXX              XXX            X_MM     U_MS_L        U_MS_D       U_MS_U       U_MS_R       XXX           XXX
 //├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-&sk LCTRL          &tmux_zoom_pane &tmux_split_horizontal &tmux_split_vertical &tmux_break_pane &tmux_prev_pane X_MB &kp HOME &kp PG_UP &kp PG_DN &kp END XXX XXX
+XXX         XXX              XXX              XXX              XXX              XXX            X_MB     U_WH_L        U_WH_D       U_WH_U       U_WH_R       XXX           XXX
 //├──────┤ ╰─────────────--┼────────────────┴─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                                   &kp LGUI  &kp SPACE   &kp DOT    X_MH      &kp RET        &kp BSPC     &kp DEL
+                                                   XXX       XXX         XXX      X_MH     &mkp LCLK   &mkp RCLK    &mkp MCLK
 //╰──────╯                                           ╰─────────────┴─────────────┴─────────────╯          ╰─────────────┴─────────────┴─────────────╯
 )

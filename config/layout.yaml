@@ -42,7 +42,7 @@ layers:
     - {t: DEL, h: NAV2}
     - {t: RET, h: FUN}
     - {t: BSPC, h: NUM}
-    - {t: LSHFT, h: sticky, s: CAPS_WORD}
+    - {t: LSHFT, s: CAPS_WORD}
 
   num:
     - LG(GRAVE)
@@ -177,7 +177,7 @@ layers:
     - DEL
 
   fun:
-    - ''
+    - CAPS
     - F1
     - F2
     - F3
@@ -198,71 +198,72 @@ layers:
     - VOL_DN
     - MUTE
     - VOL_UP
-    - SCREEN_RECORD
-    - SCREEN_SELECTION
-    - ''
-    - SCREEN_FULL
-    - SCREEN_COPY
-    - SCREEN_SELECTION_COPY
-    - ''
-    - ''
-    - ''
-
-  nav2:
-    - GRAVE
-    - TMUX_PREV_WINDOW
-    - TMUX_NEXT_WINDOW
-    - TMUX_LAST_WINDOW
-    - TMUX_CHOOSE_WINDOW
-    - TMUX_NEW_WINDOW
-    - TMUX_JOIN_PREV_WINDOW
-    - WH_U
-    - WH_D
-    - TMUX_COPY_MODE
-    - TMUX_PASTE_BUFFER
-    - TMUX_CHOOSE_PANE
-    - ''
-    - {t: LALT, h: sticky}
-    - {t: LCTRL, h: sticky}
-    - {t: LALT, h: sticky}
-    - {t: LGUI, h: sticky}
-    - {t: LSHFT, h: sticky}
-    - LEFT
-    - DOWN
-    - UP
-    - RIGHT
-    - ''
-    - ''
-    - ''
-    - {t: LCTRL, h: sticky}
-    - TMUX_ZOOM
-    - TMUX_SPLIT_H
-    - TMUX_SPLIT_V
-    - TMUX_BREAK_PANE
-    - TMUX_PREV_PANE
-    - HOME
-    - PG_UP
-    - PG_DN
-    - END
     - ''
     - ''
     - ''
     - ''
-    - ''
-    - ''
-    - ''
+    - LC(LG(LS(N1)))
+    - LC(LG(LS(N2)))
+    - LC(LG(LS(N3)))
+    - LC(LG(LS(N4)))
+    - LC(LG(LS(N5)))
     - BT 0
     - BT 1
     - BT 2
     - BT 3
     - BT CLR
     - ''
+    - LGUI
+    - SPACE
+    - LALT
+    - RET
+    - BSPC
+    - DEL
+
+  nav2:
+    - {t: LALT, h: TAB cycle}
     - ''
     - ''
     - ''
     - ''
     - ''
     - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - MOUSE_LEFT
+    - MOUSE_DOWN
+    - MOUSE_UP
+    - MOUSE_RIGHT
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - SCROLL_LEFT
+    - SCROLL_DOWN
+    - SCROLL_UP
+    - SCROLL_RIGHT
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - LCLK
+    - RCLK
+    - MCLK
 
 combos:
   - {p: [31, 32], k: LT, l: [num]}

@@ -5,6 +5,7 @@ parse_config:
   raw_binding_map:
     "&alt_caps": {t: LALT, h: 2x CAPS}
     "&tab_cmd_tab": {t: TAB, h: 2x LG(TAB)}
+    "&swapper": {t: LALT, h: TAB cycle}
 
 draw_config:
   footer_text: "urob/zmk-config"
