@@ -4,7 +4,7 @@ Consider the files in the context:
  1 config/base.keymap:
 
  • Main keymap file for a ZMK keyboard configuration
- • Defines the active layers (base, num, nav, one_hand)
+ • Defines the active layers (base, num, nav, fun, nav2)
  • Contains complex behaviors like hold-tap, combos, and leader key sequences
  • Includes various custom macros and key definitions
 
@@ -44,7 +44,7 @@ Consider the files in the context:
 
 The files work together to create a complete keyboard firmware configuration with:
 
- • Four layers for keyboard, numbers, navigation, and one-handed navigation
+ • Five layers for keyboard, numbers, navigation, functions, and secondary navigation
  • Complex key combinations
  • Special character input
  • System control functions
@@ -78,10 +78,10 @@ consider this config/base.keymap and config/corne.keymap of urob/zmk-config are 
   , for
   example: 
 
-  ZMK_COMBO(esc,   &kp ESC,      LT3 LT2,     DEF NUM ONE_HAND, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+  ZMK_COMBO(esc,   &kp ESC,      LT3 LT2,     DEF NUM NAV, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
   you should translate to 
 
   - p: [3, 2]
     k: ESC
-    l: [base, num, nav, one_hand]
+    l: [base, num, nav]

@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
   base:
-    - {t: TAB, h: 2x LG(TAB)}
+    - {t: LGUI, h: TAB cycle}
     - Q
     - W
     - E
@@ -13,7 +13,7 @@ layers:
     - O
     - P
     - BSPC
-    - {t: LALT, h: 2x CAPS}
+    - {t: LCTRL, h: sticky}
     - A
     - S
     - D
@@ -25,7 +25,7 @@ layers:
     - L
     - ";"
     - "'"
-    - LCTRL
+    - {t: LSHFT, h: sticky}
     - Z
     - X
     - C
@@ -57,7 +57,7 @@ layers:
     - "("
     - ")"
     - ''
-    - ''
+    - {t: LCTRL, h: sticky}
     - '1'
     - '2'
     - '3'
@@ -69,7 +69,7 @@ layers:
     - '9'
     - '0'
     - ''
-    - ''
+    - {t: LSHFT, h: sticky}
     - {t: LCTRL, h: sticky}
     - {t: LALT, h: sticky}
     - {t: LGUI, h: sticky}
@@ -80,7 +80,7 @@ layers:
     - {t: RALT, h: sticky}
     - {t: RCTRL, h: sticky}
     - ''
-    - ''
+    - LCTRL
     - LGUI
     - SPACE
     - DOT
@@ -93,16 +93,15 @@ layers:
     - TMUX_PREV_WINDOW
     - TMUX_NEXT_WINDOW
     - TMUX_LAST_WINDOW
-    - TMUX_CHOOSE_WINDOW
+    - ''
     - TMUX_NEW_WINDOW
     - TMUX_JOIN_PREV_WINDOW
-    - ''
-    - ''
-    - ''
     - TMUX_PASTE_BUFFER
-    - TMUX_CHOOSE_PANE
+    - TMUX_CHOOSE_WINDOW
     - ''
-    - {t: LALT, h: sticky}
+    - ''
+    - ''
+    - {t: LCTRL, h: sticky}
     - {t: LCTRL, h: sticky}
     - {t: LALT, h: sticky}
     - {t: LGUI, h: sticky}
@@ -114,8 +113,7 @@ layers:
     - RIGHT
     - ''
     - ''
-    - ''
-    - {t: LCTRL, h: sticky}
+    - {t: LSHFT, h: sticky}
     - TMUX_ZOOM
     - TMUX_SPLIT_H
     - TMUX_SPLIT_V
@@ -126,53 +124,10 @@ layers:
     - PG_DN
     - END
     - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-
-  one_hand:
-    - LG(GRAVE)
-    - HOME
-    - PG_UP
-    - PG_DN
-    - END
-    - ''
-    - SCREEN_RECORD
-    - SCREEN_SELECTION
-    - SCREEN_FULL
-    - ''
-    - ''
-    - ''
-    - {t: LCTRL, h: sticky}
-    - ''
-    - BSPC
-    - RET
-    - DEL
-    - ''
-    - SCREEN_COPY
-    - SCREEN_SELECTION_COPY
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: LSHFT, h: sticky}
-    - LEFT
-    - DOWN
-    - UP
-    - RIGHT
-    - INS
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
+    - LCTRL
     - LGUI
     - SPACE
-    - LALT
+    - DOT
     - RET
     - BSPC
     - DEL
@@ -190,7 +145,7 @@ layers:
     - F9
     - F10
     - ''
-    - ''
+    - {t: LCTRL, h: sticky}
     - F11
     - F12
     - PREV
@@ -202,7 +157,7 @@ layers:
     - ''
     - ''
     - ''
-    - ''
+    - {t: LSHFT, h: sticky}
     - LC(LG(LS(N1)))
     - LC(LG(LS(N2)))
     - LC(LG(LS(N3)))
@@ -213,7 +168,7 @@ layers:
     - BT 2
     - BT 3
     - BT CLR
-    - ''
+    - LCTRL
     - LGUI
     - SPACE
     - LALT
@@ -227,7 +182,6 @@ layers:
     - LG(LS(LBKT))
     - LG(LS(RBKT))
     - LA(SPACE)
-    - C_AC_BACK
     - ''
     - ''
     - ''
@@ -235,34 +189,33 @@ layers:
     - ''
     - ''
     - ''
-    - ''
-    - ''
+    - {t: LCTRL, h: sticky}
     - BSPC
+    - LS(RET)
+    - LC(RET)
     - RET
     - DEL
-    - C_AC_FORWARD
     - MOUSE_LEFT
     - MOUSE_DOWN
     - MOUSE_UP
     - MOUSE_RIGHT
     - ''
     - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
+    - {t: LSHFT, h: sticky}
+    - LC(LG(LS(N1)))
+    - LC(LG(LS(N2)))
+    - LC(LG(LS(N3)))
+    - LC(LG(LS(N4)))
+    - LC(LG(LS(N5)))
     - SCROLL_LEFT
     - SCROLL_DOWN
     - SCROLL_UP
     - SCROLL_RIGHT
+    - ''
+    - LCTRL
     - LGUI
     - SPACE
     - LALT
-    - ''
-    - ''
     - LCLK
     - RCLK
     - MCLK
@@ -277,7 +230,7 @@ combos:
   - {p: [14, 15], k: LC(SPACE), l: [base, num]}
   - {p: [16, 15], k: COLON, l: [base]}
   - {p: [4, 3], k: UNDER, l: [base, num]}
-  - {p: [15, 27], k: MINUS, l: [base, num]}
+  - {p: [17, 29], k: MINUS, l: [base, num]}
   - {p: [2, 3], k: QMARK, l: [base, num]}
   - {p: [28, 27], k: EQUAL, l: [base, num]}
   - {p: [18, 30], k: PIPE, l: [base, num]}
@@ -286,4 +239,3 @@ combos:
   - {p: [19, 31], k: TILDE, l: [base, num]}
   - {p: [19, 8], k: QTSPC, l: [base, num]}
   - {p: [20, 31], k: FSLH, l: [base, num]}
-  - {p: [37, 38], k: ONE_HAND, l: [base]}

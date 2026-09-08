@@ -39,7 +39,7 @@ layers:
     - {t: RSHFT, h: sticky}
     - {t: ESC, h: LGUI}
     - {t: SPACE, h: NAV}
-    - {t: TAB, h: ONE_HAND}
+    - {t: DEL, h: NAV2}
     - {t: RET, h: NAV}
     - {t: BSPC, h: NUM}
     - LCTRL
@@ -132,50 +132,6 @@ layers:
     - ''
     - ''
 
-  one_hand:
-    - LC(SPACE)
-    - HOME
-    - PG_UP
-    - PG_DN
-    - END
-    - DEL
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: LCTRL, h: sticky}
-    - RET
-    - BSPC
-    - DEL
-    - TAB
-    - ESC
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: LSHFT, h: sticky}
-    - LEFT
-    - DOWN
-    - UP
-    - RIGHT
-    - INS
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - LGUI
-    - SPACE
-    - LALT
-    - RET
-    - BSPC
-    - DEL
-
 combos:
   - {p: [31, 32], k: LT, l: [num]}
   - {p: [32, 33], k: GT, l: [num]}
@@ -199,7 +155,7 @@ combos:
   - {p: [7, 19], k: AMPERSAND, l: [base, num]}
   - {p: [8, 20], k: ASTERISK, l: [base, num]}
   - {p: [4, 3], k: UNDER, l: [base, num]}
-  - {p: [15, 27], k: MINUS, l: [base, num]}
+  - {p: [17, 29], k: MINUS, l: [base, num]}
   - {p: [2, 3], k: QMARK, l: [base, num]}
   - {p: [28, 27], k: EQUAL, l: [base, num]}
   - {p: [16, 3], k: GRAVE, l: [base, num]}

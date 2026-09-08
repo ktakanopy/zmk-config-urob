@@ -3,8 +3,7 @@ parse_config:
   zmk_additional_includes:
     - "modules/zmk/helpers/include"
   raw_binding_map:
-    "&alt_caps": {t: LALT, h: 2x CAPS}
-    "&tab_cmd_tab": {t: TAB, h: 2x LG(TAB)}
+    "&cmd_swapper": {t: LGUI, h: TAB cycle}
     "&swapper": {t: LALT, h: TAB cycle}
     "&tmux_prev_window": {t: PREV WIN, h: TMUX}
     "&tmux_next_window": {t: NEXT WIN, h: TMUX}
@@ -14,7 +13,6 @@ parse_config:
     "&tmux_join_previous_window": {t: JOIN WIN, h: TMUX}
     "&tmux_copy_mode": {t: COPY MODE, h: TMUX}
     "&tmux_paste_buffer": {t: PASTE, h: TMUX}
-    "&tmux_choose_pane": {t: CHOOSE PANE, h: TMUX}
     "&tmux_zoom_pane": {t: ZOOM, h: TMUX}
     "&tmux_split_horizontal": {t: SPLIT H, h: TMUX}
     "&tmux_split_vertical": {t: SPLIT V, h: TMUX}
