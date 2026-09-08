@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
   base:
-    - {t: LGUI, h: TAB cycle}
+    - TAB
     - Q
     - W
     - E
