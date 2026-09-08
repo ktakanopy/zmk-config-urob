@@ -266,10 +266,10 @@ layers:
     - RCLK
     - MCLK
 combos:
-  - {p: [31, 32], k: LT, l: [num]}
-  - {p: [32, 33], k: GT, l: [num]}
-  - {p: [19, 20], k: "{", l: [num]}
-  - {p: [20, 21], k: "}", l: [num]}
+  - {p: [31, 32], k: "(", l: [base]}
+  - {p: [32, 33], k: ")", l: [base]}
+  - {p: [19, 20], k: "[", l: [base]}
+  - {p: [20, 21], k: "]", l: [base]}
   - {p: [15, 28], k: BSLH, l: [base, num]}
   - {p: [7, 8], k: LS(RET), l: [base, num]}
   - {p: [8, 9], k: TILDE_SPACE, l: [base, num]}
