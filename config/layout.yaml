@@ -222,23 +222,22 @@ layers:
 
   nav2:
     - {t: LALT, h: TAB cycle}
-    - ''
+    - LG(SPACE)
     - LG(LS(LBKT))
     - LG(LS(RBKT))
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - LG(SPACE)
     - LA(SPACE)
     - ''
     - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - BSPC
+    - RET
+    - DEL
     - ''
     - MOUSE_LEFT
     - MOUSE_DOWN
