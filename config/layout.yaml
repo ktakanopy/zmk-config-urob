@@ -223,6 +223,8 @@ layers:
   nav2:
     - {t: LALT, h: TAB cycle}
     - ''
+    - LG(LS(LBKT))
+    - LG(LS(RBKT))
     - ''
     - ''
     - ''
@@ -233,9 +235,8 @@ layers:
     - ''
     - ''
     - ''
-    - ''
-    - ''
-    - ''
+    - LG(SPACE)
+    - LA(SPACE)
     - ''
     - ''
     - ''
@@ -247,8 +248,8 @@ layers:
     - ''
     - ''
     - ''
-    - ''
-    - ''
+    - C_AC_BACK
+    - C_AC_FORWARD
     - ''
     - ''
     - ''
@@ -264,7 +265,6 @@ layers:
     - LCLK
     - RCLK
     - MCLK
-
 combos:
   - {p: [31, 32], k: LT, l: [num]}
   - {p: [32, 33], k: GT, l: [num]}
