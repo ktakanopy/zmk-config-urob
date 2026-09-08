@@ -274,13 +274,13 @@ combos:
   - {p: [7, 8], k: LS(RET), l: [base, num]}
   - {p: [8, 9], k: TILDE_SPACE, l: [base, num]}
   - {p: [14, 15], k: LC(SPACE), l: [base, num]}
-  - {p: [16, 15], k: LC(X), l: [base]}
+  - {p: [16, 15], k: COLON, l: [base]}
   - {p: [4, 3], k: UNDER, l: [base, num]}
   - {p: [15, 27], k: MINUS, l: [base, num]}
   - {p: [2, 3], k: QMARK, l: [base, num]}
   - {p: [28, 27], k: EQUAL, l: [base, num]}
   - {p: [18, 30], k: PIPE, l: [base, num]}
-  - {p: [27, 26], k: SEMI, l: [base, num]}
+  - {p: [27, 26], k: LC(X), l: [base, num]}
   - {p: [16, 28], k: PLUS, l: [base, num]}
   - {p: [19, 31], k: TILDE, l: [base, num]}
   - {p: [19, 8], k: QTSPC, l: [base, num]}
