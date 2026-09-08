@@ -142,14 +142,6 @@ ZMK_HOLD_TAP(lt_bspc,
     bindings = <&mo>, <&kp>;
 )
 
-ZMK_HOLD_TAP(esc_lgui,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&kp>, <&kp>;
-)
-
-
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
 ZMK_MOD_MORPH(bs_del,
     bindings = <&kp BSPC>, <&kp DEL>;
@@ -255,13 +247,13 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
 ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    &cmd_swapper  &kp Q         &kp W         &kp E         &kp R         &kp T        X_MT     &kp Y       &kp U         &kp I         &kp O         &kp P          &kp BSPC
+    &cmd_swapper  &kp Q         &kp W         &kp E         &kp R         &kp T        X_MT     &kp Y       &kp U         &kp I         &kp O         &kp P          &kp ESC
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &alt_caps     &kp A          &kp S          &kp D          &kp F          &kp G      X_MM     &kp H     &kp J          &kp K          &kp L          &kp SEMI     &kp SQT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &kp LCTRL     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &kp COMMA     &kp DOT       &kp FSLH     &kp LCTRL
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                    &esc_lgui LGUI ESC    &lt NAV SPACE       &lt NAV2 DEL     X_MH     &lt FUN RET      &lt NUM BSPC  &sk LSHFT
+                                    &kp LGUI              &lt NAV SPACE       &lt NAV2 DEL     X_MH     &lt FUN RET      &lt NUM BSPC  &sk LSHFT
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 

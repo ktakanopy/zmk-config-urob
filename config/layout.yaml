@@ -12,7 +12,7 @@ layers:
     - I
     - O
     - P
-    - BSPC
+    - ESC
     - {t: LALT, h: 2x CAPS}
     - A
     - S
@@ -37,7 +37,7 @@ layers:
     - "."
     - "/"
     - LCTRL
-    - {t: ESC, h: LGUI}
+    - LGUI
     - {t: SPACE, h: NAV}
     - {t: DEL, h: NAV2}
     - {t: RET, h: FUN}

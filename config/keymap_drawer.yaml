@@ -12,7 +12,7 @@ layers:
     - I
     - O
     - P
-    - BSPC
+    - ESC
     - LALT
     - A
     - S
@@ -37,7 +37,7 @@ layers:
     - {t: ".", h: dot_morph}
     - "/"
     - {t: RSHFT, h: sticky}
-    - {t: ESC, h: LGUI}
+    - LGUI
     - {t: SPACE, h: NAV}
     - {t: DEL, h: NAV2}
     - {t: RET, h: NAV}
