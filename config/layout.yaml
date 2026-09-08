@@ -13,7 +13,7 @@ layers:
     - O
     - P
     - BSPC
-    - {t: LCTRL, h: sticky}
+    - {t: LALT, h: 2x CAPS}
     - A
     - S
     - D
@@ -25,7 +25,7 @@ layers:
     - L
     - ";"
     - "'"
-    - {t: LSHFT, h: sticky}
+    - LCTRL
     - Z
     - X
     - C
@@ -57,7 +57,7 @@ layers:
     - "("
     - ")"
     - ''
-    - {t: LCTRL, h: sticky}
+    - {t: LALT, h: sticky}
     - '1'
     - '2'
     - '3'
@@ -69,7 +69,7 @@ layers:
     - '9'
     - '0'
     - ''
-    - {t: LSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
     - {t: LCTRL, h: sticky}
     - {t: LALT, h: sticky}
     - {t: LGUI, h: sticky}
@@ -93,15 +93,15 @@ layers:
     - TMUX_PREV_WINDOW
     - TMUX_NEXT_WINDOW
     - TMUX_LAST_WINDOW
-    - ''
+    - TMUX_CHOOSE_WINDOW
     - TMUX_NEW_WINDOW
     - TMUX_JOIN_PREV_WINDOW
     - TMUX_PASTE_BUFFER
-    - TMUX_CHOOSE_WINDOW
     - ''
     - ''
     - ''
-    - {t: LCTRL, h: sticky}
+    - ''
+    - {t: LALT, h: sticky}
     - {t: LCTRL, h: sticky}
     - {t: LALT, h: sticky}
     - {t: LGUI, h: sticky}
@@ -113,7 +113,7 @@ layers:
     - RIGHT
     - ''
     - ''
-    - {t: LSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
     - TMUX_ZOOM
     - TMUX_SPLIT_H
     - TMUX_SPLIT_V
@@ -145,7 +145,7 @@ layers:
     - F9
     - F10
     - ''
-    - {t: LCTRL, h: sticky}
+    - {t: LALT, h: sticky}
     - F11
     - F12
     - PREV
@@ -157,7 +157,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: LSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
     - LC(LG(LS(N1)))
     - LC(LG(LS(N2)))
     - LC(LG(LS(N3)))
@@ -189,7 +189,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: LCTRL, h: sticky}
+    - {t: LALT, h: sticky}
     - BSPC
     - LS(RET)
     - LC(RET)
@@ -201,7 +201,7 @@ layers:
     - MOUSE_RIGHT
     - ''
     - ''
-    - {t: LSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
     - LC(LG(LS(N1)))
     - LC(LG(LS(N2)))
     - LC(LG(LS(N3)))
