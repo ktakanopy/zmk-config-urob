@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
   base:
-    - TAB
+    - {t: TAB, h: 2x LG(TAB)}
     - Q
     - W
     - E
@@ -13,7 +13,7 @@ layers:
     - O
     - P
     - BSPC
-    - LALT
+    - {t: LALT, h: 2x CAPS}
     - A
     - S
     - D
@@ -25,7 +25,7 @@ layers:
     - L
     - ";"
     - "'"
-    - {t: LSHFT, h: sticky}
+    - LCTRL
     - Z
     - X
     - C
@@ -33,19 +33,19 @@ layers:
     - B
     - N
     - M
-    - {t: ",", h: comma_morph}
-    - {t: ".", h: dot_morph}
+    - ","
+    - "."
     - "/"
-    - {t: RSHFT, h: sticky}
+    - LCTRL
     - {t: ESC, h: LGUI}
     - {t: SPACE, h: NAV}
-    - {t: TAB, h: ONE_HAND}
+    - {t: DEL, h: NAV2}
     - {t: RET, h: FUN}
     - {t: BSPC, h: NUM}
-    - LCTRL
+    - {t: LSHFT, h: sticky, s: CAPS_WORD}
 
   num:
-    - GRAVE
+    - LG(GRAVE)
     - "!"
     - "@"
     - "#"
@@ -133,12 +133,12 @@ layers:
     - ''
 
   one_hand:
-    - LC(SPACE)
+    - LG(GRAVE)
     - HOME
     - PG_UP
     - PG_DN
     - END
-    - DEL
+    - ''
     - SCREEN_RECORD
     - SCREEN_SELECTION
     - SCREEN_FULL
@@ -201,17 +201,61 @@ layers:
     - SCREEN_RECORD
     - SCREEN_SELECTION
     - ''
-    - ''
+    - SCREEN_FULL
     - SCREEN_COPY
     - SCREEN_SELECTION_COPY
     - ''
     - ''
     - ''
-    - SCREEN_FULL
+
+  nav2:
+    - GRAVE
+    - TMUX_PREV_WINDOW
+    - TMUX_NEXT_WINDOW
+    - TMUX_LAST_WINDOW
+    - TMUX_CHOOSE_WINDOW
+    - TMUX_NEW_WINDOW
+    - TMUX_JOIN_PREV_WINDOW
+    - WH_U
+    - WH_D
+    - TMUX_COPY_MODE
+    - TMUX_PASTE_BUFFER
+    - TMUX_CHOOSE_PANE
+    - ''
+    - {t: LALT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - {t: LALT, h: sticky}
+    - {t: LGUI, h: sticky}
+    - {t: LSHFT, h: sticky}
+    - LEFT
+    - DOWN
+    - UP
+    - RIGHT
+    - ''
+    - ''
+    - ''
+    - {t: LCTRL, h: sticky}
+    - TMUX_ZOOM
+    - TMUX_SPLIT_H
+    - TMUX_SPLIT_V
+    - TMUX_BREAK_PANE
+    - TMUX_PREV_PANE
+    - HOME
+    - PG_UP
+    - PG_DN
+    - END
     - ''
     - ''
     - ''
     - ''
+    - ''
+    - ''
+    - ''
+    - BT 0
+    - BT 1
+    - BT 2
+    - BT 3
+    - BT CLR
     - ''
     - ''
     - ''
@@ -223,34 +267,21 @@ layers:
 combos:
   - {p: [31, 32], k: LT, l: [num]}
   - {p: [32, 33], k: GT, l: [num]}
-  - {p: [31, 32], k: "(", l: [base]}
-  - {p: [32, 33], k: ")", l: [base]}
-  - {p: [19, 20], k: "[", l: [base]}
-  - {p: [20, 21], k: "]", l: [base]}
   - {p: [19, 20], k: "{", l: [num]}
   - {p: [20, 21], k: "}", l: [num]}
   - {p: [15, 28], k: BSLH, l: [base, num]}
   - {p: [7, 8], k: LS(RET), l: [base, num]}
   - {p: [8, 9], k: TILDE_SPACE, l: [base, num]}
   - {p: [14, 15], k: LC(SPACE), l: [base, num]}
-  - {p: [16, 15], k: LG(K), l: [base]}
-  - {p: [2, 15], k: EXCL, l: [base, num]}
-  - {p: [2, 14], k: AT, l: [base, num]}
-  - {p: [3, 15], k: HASH, l: [base, num]}
-  - {p: [4, 16], k: DOLLAR, l: [base, num]}
-  - {p: [5, 17], k: PERCENT, l: [base, num]}
-  - {p: [6, 18], k: CARET, l: [base, num]}
-  - {p: [7, 19], k: AMPERSAND, l: [base, num]}
-  - {p: [8, 20], k: ASTERISK, l: [base, num]}
+  - {p: [16, 15], k: LC(X), l: [base]}
   - {p: [4, 3], k: UNDER, l: [base, num]}
   - {p: [15, 27], k: MINUS, l: [base, num]}
   - {p: [2, 3], k: QMARK, l: [base, num]}
   - {p: [28, 27], k: EQUAL, l: [base, num]}
-  - {p: [16, 3], k: GRAVE, l: [base, num]}
   - {p: [18, 30], k: PIPE, l: [base, num]}
   - {p: [27, 26], k: SEMI, l: [base, num]}
-  - {p: [16, 15], k: SEMI, l: [base, num]}
   - {p: [16, 28], k: PLUS, l: [base, num]}
   - {p: [19, 31], k: TILDE, l: [base, num]}
   - {p: [19, 8], k: QTSPC, l: [base, num]}
   - {p: [20, 31], k: FSLH, l: [base, num]}
+  - {p: [37, 38], k: ONE_HAND, l: [base]}

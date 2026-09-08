@@ -2,6 +2,9 @@ parse_config:
   zmk_preamble: "#include <zmk-helpers/key-labels/42.h>"
   zmk_additional_includes:
     - "modules/zmk/helpers/include"
+  raw_binding_map:
+    "&alt_caps": {t: LALT, h: 2x CAPS}
+    "&tab_cmd_tab": {t: TAB, h: 2x LG(TAB)}
 
 draw_config:
   footer_text: "urob/zmk-config"

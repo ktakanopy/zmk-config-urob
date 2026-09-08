@@ -13,6 +13,7 @@
 #define NAV 2
 #define ONE_HAND 3
 #define FUN 4
+#define NAV2 5
 #define XXX &none
 #define ___ &trans
 
@@ -128,27 +129,17 @@ ZMK_TRI_STATE(swapper,
         bindings = <BINDING1>, <BINDING2>; \
     )
 
-// tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
-SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
-SIMPLE_MORPH(comma_inner_morph, CTL, &kp SEMICOLON, &kp LESS_THAN)
-
-// tap: dot | shift + tap: colon | ctrl + shift + tap: >
-SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
-SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
-
 // tap: qmark | shift + tap: excl
 SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 
-// tap: left/right parenthesis | shft + tap: less-than/greater-than
-SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
-SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
-
-// tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layerc
-ZMK_HOLD_TAP(lt_spc,
-    flavor = "balanced";
+ZMK_TAP_DANCE(alt_caps,
     tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&spc_morph>;
+    bindings = <&kp LALT>, <&kp CAPS>;
+)
+
+ZMK_TAP_DANCE(tab_cmd_tab,
+    tapping-term-ms = <200>;
+    bindings = <&kp TAB>, <&kp LG(TAB)>;
 )
 
 ZMK_HOLD_TAP(fst_lt,
@@ -158,21 +149,6 @@ ZMK_HOLD_TAP(fst_lt,
     bindings = <&kp>, <&kp>;
 )
 
-// tap: esc | double tap: toggle one-hand layer | hold: lgui
-ZMK_HOLD_TAP(smart_lt,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&kp>, <&one_hand_dance>;
-)
-
-
-ZMK_TAP_DANCE(one_hand_dance,
-    tapping-term-ms = <200>;
-    bindings = <&kp ESC>, <&sl ONE_HAND>;
-)
-
-
 ZMK_HOLD_TAP(lt_bspc,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -180,12 +156,11 @@ ZMK_HOLD_TAP(lt_bspc,
     bindings = <&mo>, <&kp>;
 )
 
-
-SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &dot_spc)
-ZMK_MACRO(dot_spc,
-    wait-ms = <0>;
-    tap-ms = <5>;
-    bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+ZMK_HOLD_TAP(esc_lgui,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&kp>, <&kp>;
 )
 
 
@@ -194,10 +169,6 @@ ZMK_MOD_MORPH(bs_del,
     bindings = <&kp BSPC>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
     keep-mods = <MOD_RSFT>;
-)
-
-ZMK_MACRO(qtspc,
-    bindings = <&macro_tap &kp DQT &kp SPACE>;
 )
 
 ZMK_MACRO(tmux_prev_window,
@@ -304,13 +275,13 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
 ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    &kp TAB     &kp Q         &kp W         &kp E         &kp R         &kp T        X_MT     &kp Y       &kp U         &kp I         &kp O         &kp P          &kp BSPC
+    &tab_cmd_tab &kp Q         &kp W         &kp E         &kp R         &kp T        X_MT     &kp Y       &kp U         &kp I         &kp O         &kp P          &kp BSPC
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &kp LALT      &kp A          &kp S          &kp D          &kp F          &kp G      X_MM     &kp H     &kp J          &kp K          &kp L          &kp SEMI     &kp SQT
+    &alt_caps     &kp A          &kp S          &kp D          &kp F          &kp G      X_MM     &kp H     &kp J          &kp K          &kp L          &kp SEMI     &kp SQT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &kp LCTRL     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &comma_morph  &dot_morph    &kp FSLH     &kp LCTRL
+    &kp LCTRL     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &kp COMMA     &kp DOT       &kp FSLH     &kp LCTRL
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                    &smart_lt LGUI 0   &lt_spc NAV  0  &hml LCTRL TAB      X_MH     &lt FUN RET      &lt NUM BSPC  SMART_SHIFT
+                                    &esc_lgui LGUI ESC    &lt NAV SPACE       &lt NAV2 DEL     X_MH     &lt FUN RET      &lt NUM BSPC  SMART_SHIFT
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
@@ -332,7 +303,7 @@ ZMK_LAYER(num,
 ZMK_LAYER(nav,
 
 //╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-&kp GRAVE    &tmux_prev_window &tmux_next_window &tmux_last_window &tmux_choose_window &tmux_new_window X_MT &tmux_join_previous_window U_WH_U U_WH_D &tmux_copy_mode &tmux_paste_buffer &tmux_choose_pane
+&kp LG(GRAVE) &tmux_prev_window &tmux_next_window &tmux_last_window &tmux_choose_window &tmux_new_window X_MT &tmux_join_previous_window U_WH_U U_WH_D &tmux_copy_mode &tmux_paste_buffer &tmux_choose_pane
 //├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
 &sk LALT           &sk LCTRL       &sk LALT       &sk LGUI       &sk LSHFT     XXX            X_MM           &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT     XXX           XXX
 //├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
@@ -345,11 +316,11 @@ ZMK_LAYER(nav,
 ZMK_LAYER(one_hand,
 
 //╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-&kp LG(GRAVE) &kp HOME       &kp UP            &kp END         &kp PG_UP    XXX        X_MT      &kp LG(LS(N5)) &kp LG(LS(N4)) &kp LG(LS(N3)) XXX           XXX           XXX
+&kp LG(GRAVE) &kp HOME       &kp PG_UP         &kp PG_DN       &kp END      XXX        X_MT      &kp LG(LS(N5)) &kp LG(LS(N4)) &kp LG(LS(N3)) XXX           XXX           XXX
 //├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
 &sk LCTRL   XXX              &kp BSPC        &kp RET          &kp DEL       XXX            X_MM      &kp LC(LG(LS(N3))) &kp LC(LG(LS(N4))) XXX           XXX           XXX           XXX
 //├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-&sk LSHFT  &kp RET           &kp BSPC       &kp DEL          &kp TAB      XXX              X_MB      XXX           XXX          XXX           XXX          XXX           XXX
+&sk LSHFT  &kp LEFT          &kp DOWN       &kp UP           &kp RIGHT    &kp INS          X_MB      XXX           XXX          XXX           XXX          XXX           XXX
 //├──────┤ ╰─────────────--┼────────────────┴─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                                    &kp LGUI  &kp SPACE   &kp LALT   X_MH      &kp RET        &kp BSPC     &kp DEL
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
@@ -361,8 +332,21 @@ ZMK_LAYER(fun,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     XXX         &kp F11       &kp F12       &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT   X_MM     &kp C_VOL_DN &kp C_MUTE     &kp C_VOL_UP   &kp LG(LS(N5)) &kp LG(LS(N4)) XXX
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &kp LG(LS(N3)) &kp LC(LG(LS(N3))) &kp LC(LG(LS(N4))) XXX          XXX          XXX         X_MB     XXX           XXX             XXX            XXX            XXX            XXX
+    &kp LG(LS(N3)) &kp LC(LG(LS(N3))) &kp LC(LG(LS(N4))) XXX          XXX          XXX         X_MB     _BT_SEL_KEYS_ XXX
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                                    &kp LGUI  &kp SPACE   &kp LALT   X_MH      &kp RET        &kp BSPC     &kp DEL
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯
+)
+
+ZMK_LAYER(nav2,
+
+//╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+&kp LG(GRAVE) &tmux_prev_window &tmux_next_window &tmux_last_window &tmux_choose_window &tmux_new_window X_MT &tmux_join_previous_window U_WH_U U_WH_D &tmux_copy_mode &tmux_paste_buffer &tmux_choose_pane
+//├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+&sk LALT           &sk LCTRL       &sk LALT       &sk LGUI       &sk LSHFT     XXX            X_MM           &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT     XXX           XXX
+//├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+&sk LCTRL          &tmux_zoom_pane &tmux_split_horizontal &tmux_split_vertical &tmux_break_pane &tmux_prev_pane X_MB &kp HOME &kp PG_UP &kp PG_DN &kp END XXX XXX
+//├──────┤ ╰─────────────--┼────────────────┴─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
+                                                   &kp LGUI  &kp SPACE   &kp DOT    X_MH      &kp RET        &kp BSPC     &kp DEL
+//╰──────╯                                           ╰─────────────┴─────────────┴─────────────╯          ╰─────────────┴─────────────┴─────────────╯
 )
