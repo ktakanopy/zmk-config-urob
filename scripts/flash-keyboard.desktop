@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Atualizar firmware do Corne
-Comment=Baixa e grava o firmware mais recente no teclado
+Comment=Compila e grava o firmware mais recente no teclado
 Exec=/home/deck/zmk-config-urob/scripts/flash-keyboard-gui.sh
 Icon=input-keyboard
 Terminal=false
