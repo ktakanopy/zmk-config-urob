@@ -267,11 +267,11 @@ ZMK_LAYER(num,
 
 
 //╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-&kp GRAVE        &kp EXCLAMATION &kp AT_SIGN     &kp HASH        &kp DOLLAR    &kp PERCENT   X_MT           &kp CARET     &kp AMPERSAND &kp ASTERISK &kp LPAR      &kp RPAR        &kp LBKT
+&kp GRAVE        &kp EXCLAMATION &kp AT_SIGN     &kp HASH        &kp DOLLAR    &kp PERCENT   X_MT           &kp CARET     &kp AMPERSAND &kp ASTERISK &kp LPAR      &kp RPAR        &kp ESC
 //├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-&sk LCTRL     &kp N1          &kp N2           &kp N3          &kp N4        &kp N5        X_MM           &kp N6        &kp N7        &kp N8       &kp N9       &kp N0         &sk LSHFT
+&sk LCTRL     &kp N1          &kp N2           &kp N3          &kp N4        &kp N5        X_MM           &kp N6        &kp N7        &kp N8       &kp N9       &kp N0         &kp LCTRL
 //├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-&sk LALT            &sk LCTRL       &sk LALT       &sk LGUI       &sk LSHFT     &g_           X_MB           &sk RSHFT    &sk RGUI      &sk RALT      &sk RCTRL     &kp CAPS        &kp LCTRL  
+&sk LALT            &sk LCTRL       &sk LALT       &sk LGUI       &sk LSHFT     &g_           X_MB           &sk RSHFT    &sk RGUI      &sk RALT      &sk RCTRL     &kp CAPS        &kp LSHFT
 //├──────┤ ╰─────────────--┼────────────────┴─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                                    &kp LGUI  &kp SPACE   &kp DOT    X_MH      &kp RET        &kp BSPC     &kp DEL
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
@@ -280,11 +280,11 @@ ZMK_LAYER(num,
 ZMK_LAYER(nav,
 
 //╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-&kp LG(GRAVE) &tmux_last_window &tmux_prev_window &tmux_next_window &tmux_choose_window &tmux_new_window X_MT &tmux_join_previous_window &tmux_paste_buffer XXX                 XXX XXX XXX
+&kp LG(GRAVE) &tmux_last_window &tmux_prev_window &tmux_next_window &tmux_choose_window &tmux_new_window X_MT &tmux_join_previous_window &tmux_paste_buffer XXX                 XXX XXX &kp ESC
 //├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-&sk LCTRL          &sk LCTRL       &sk LALT       &sk LGUI       &sk LSHFT     &tmux_copy_mode X_MM           &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT     XXX           XXX
+&sk LCTRL          &sk LCTRL       &sk LALT       &sk LGUI       &sk LSHFT     &tmux_copy_mode X_MM           &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT     XXX           &kp LCTRL
 //├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-&sk LALT           &tmux_zoom_pane &tmux_split_horizontal &tmux_split_vertical &tmux_break_pane &tmux_prev_pane X_MB &kp HOME &kp PG_UP &kp PG_DN &kp END XXX &kp LCTRL
+&sk LALT           &tmux_zoom_pane &tmux_split_horizontal &tmux_split_vertical &tmux_break_pane &tmux_prev_pane X_MB &kp HOME &kp PG_UP &kp PG_DN &kp END XXX &kp LSHFT
 //├──────┤ ╰─────────────--┼────────────────┴─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                                    &kp LGUI  &kp SPACE   &kp DOT    X_MH      &kp RET        &kp BSPC     &kp DEL
 //╰──────╯                                           ╰─────────────┴─────────────┴─────────────╯          ╰─────────────┴─────────────┴─────────────╯
@@ -292,11 +292,11 @@ ZMK_LAYER(nav,
 
 ZMK_LAYER(fun,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    &kp CAPS    &kp F1        &kp F2        &kp F3          &kp F4          &kp F5       X_MT     &kp F6       &kp F7          &kp F8          &kp F9          &kp F10         XXX
+    &kp CAPS    &kp F1        &kp F2        &kp F3          &kp F4          &kp F5       X_MT     &kp F6       &kp F7          &kp F8          &kp F9          &kp F10         &kp ESC
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &sk LCTRL   &kp F11       &kp F12       &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT   X_MM     &kp C_VOL_DN &kp C_MUTE     &kp C_VOL_UP   XXX           XXX           XXX
+    &sk LCTRL   &kp F11       &kp F12       &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT   X_MM     &kp C_VOL_DN &kp C_MUTE     &kp C_VOL_UP   XXX           XXX           &kp LCTRL
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &sk LALT    XXX             XXX             XXX             XXX             XXX             X_MB     _BT_SEL_KEYS_ &kp LCTRL
+    &sk LALT    XXX             XXX             XXX             XXX             XXX             X_MB     _BT_SEL_KEYS_ &kp LSHFT
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                                    &kp LGUI  &kp SPACE   &kp LALT   X_MH      &kp RET        &kp BSPC     &kp DEL
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯
@@ -305,11 +305,11 @@ ZMK_LAYER(fun,
 ZMK_LAYER(nav2,
 
 //╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-&swapper    &kp LG(SPACE)    &kp LG(LS(LBKT)) &kp LG(LS(RBKT)) &kp LA(SPACE)    &kp ESC       X_MT     XXX           XXX          XXX          XXX          XXX          XXX
+&swapper    &kp LG(SPACE)    &kp LG(LS(LBKT)) &kp LG(LS(RBKT)) &kp LA(SPACE)    &kp ESC       X_MT     XXX           XXX          XXX          XXX          XXX          &kp ESC
 //├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-&sk LCTRL   &kp BSPC         &kp LS(RET)     &kp LC(RET)     &kp RET         &kp DEL          X_MM     U_MS_L        U_MS_D       U_MS_U       U_MS_R       XXX           XXX
+&sk LCTRL   &kp BSPC         &kp LS(RET)     &kp LC(RET)     &kp RET         &kp DEL          X_MM     U_MS_L        U_MS_D       U_MS_U       U_MS_R       XXX           &kp LCTRL
 //├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-&sk LALT    &kp LC(LG(LS(N1))) &kp LC(LG(LS(N2))) &kp LC(LG(LS(N3))) &kp LC(LG(LS(N4))) &kp LC(LG(LS(N5))) X_MB     U_WH_L        U_WH_D       U_WH_U       U_WH_R       XXX           &kp LCTRL
+&sk LALT    &kp LC(LG(LS(N1))) &kp LC(LG(LS(N2))) &kp LC(LG(LS(N3))) &kp LC(LG(LS(N4))) &kp LC(LG(LS(N5))) X_MB     U_WH_L        U_WH_D       U_WH_U       U_WH_R       XXX           &kp LSHFT
 //├──────┤ ╰─────────────--┼────────────────┴─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                                    &kp LGUI &kp SPACE     &kp LALT  X_MH     &mkp LCLK   &mkp RCLK    &mkp MCLK
 //╰──────╯                                           ╰─────────────┴─────────────┴─────────────╯          ╰─────────────┴─────────────┴─────────────╯

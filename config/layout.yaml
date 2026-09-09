@@ -56,7 +56,7 @@ layers:
     - "*"
     - "("
     - ")"
-    - ''
+    - ESC
     - {t: LALT, h: sticky}
     - '1'
     - '2'
@@ -68,7 +68,7 @@ layers:
     - '8'
     - '9'
     - '0'
-    - ''
+    - LCTRL
     - {t: LCTRL, h: sticky}
     - {t: LCTRL, h: sticky}
     - {t: LALT, h: sticky}
@@ -80,7 +80,7 @@ layers:
     - {t: RALT, h: sticky}
     - {t: RCTRL, h: sticky}
     - ''
-    - LCTRL
+    - LSHFT
     - LGUI
     - SPACE
     - DOT
@@ -100,7 +100,7 @@ layers:
     - ''
     - ''
     - ''
-    - ''
+    - ESC
     - {t: LALT, h: sticky}
     - {t: LCTRL, h: sticky}
     - {t: LALT, h: sticky}
@@ -112,7 +112,7 @@ layers:
     - UP
     - RIGHT
     - ''
-    - ''
+    - LCTRL
     - {t: LCTRL, h: sticky}
     - TMUX_ZOOM
     - TMUX_SPLIT_H
@@ -124,7 +124,7 @@ layers:
     - PG_DN
     - END
     - ''
-    - LCTRL
+    - LSHFT
     - LGUI
     - SPACE
     - DOT
@@ -144,7 +144,7 @@ layers:
     - F8
     - F9
     - F10
-    - ''
+    - ESC
     - {t: LALT, h: sticky}
     - F11
     - F12
@@ -156,7 +156,7 @@ layers:
     - VOL_UP
     - ''
     - ''
-    - ''
+    - LCTRL
     - {t: LCTRL, h: sticky}
     - LC(LG(LS(N1)))
     - LC(LG(LS(N2)))
@@ -168,7 +168,7 @@ layers:
     - BT 2
     - BT 3
     - BT CLR
-    - LCTRL
+    - LSHFT
     - LGUI
     - SPACE
     - LALT
@@ -182,13 +182,13 @@ layers:
     - LG(LS(LBKT))
     - LG(LS(RBKT))
     - LA(SPACE)
+    - ESC
     - ''
     - ''
     - ''
     - ''
     - ''
-    - ''
-    - ''
+    - ESC
     - {t: LALT, h: sticky}
     - BSPC
     - LS(RET)
@@ -200,7 +200,7 @@ layers:
     - MOUSE_UP
     - MOUSE_RIGHT
     - ''
-    - ''
+    - LCTRL
     - {t: LCTRL, h: sticky}
     - LC(LG(LS(N1)))
     - LC(LG(LS(N2)))
@@ -212,7 +212,7 @@ layers:
     - SCROLL_UP
     - SCROLL_RIGHT
     - ''
-    - LCTRL
+    - LSHFT
     - LGUI
     - SPACE
     - LALT
