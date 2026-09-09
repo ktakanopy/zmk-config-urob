@@ -8,11 +8,37 @@ workflow="build.yml"
 download_dir="$root_dir/downloaded"
 side="${1:-}"
 mount_point="${2:-}"
+uf2_wait_seconds="${UF2_WAIT_SECONDS:-120}"
 
 if [[ -n "$side" && "$side" != "left" && "$side" != "right" ]]; then
     echo "Usage: $0 [left|right] [mount-point]" >&2
     exit 1
 fi
+
+if [[ ! "$uf2_wait_seconds" =~ ^[0-9]+$ ]]; then
+    echo "UF2_WAIT_SECONDS must be a non-negative integer." >&2
+    exit 1
+fi
+
+find_mounted_uf2() {
+    mount_points=()
+    for mount_root in /Volumes "/run/media/$USER" "/media/$USER"; do
+        [[ -d "$mount_root" ]] || continue
+        while IFS= read -r -d '' info_file; do
+            mount_points+=("$(dirname -- "$info_file")")
+        done < <(find "$mount_root" -maxdepth 2 -type f -name INFO_UF2.TXT -print0 2>/dev/null)
+    done
+}
+
+mount_known_uf2_devices() {
+    command -v lsblk >/dev/null 2>&1 || return 0
+    command -v udisksctl >/dev/null 2>&1 || return 0
+
+    while IFS= read -r device; do
+        [[ -n "$device" ]] || continue
+        udisksctl mount --block-device "$device" >/dev/null 2>&1 || true
+    done < <(lsblk -rpno PATH,LABEL | awk 'toupper($2) ~ /^(NICENANO|NRF52BOOT|UF2)/ { print $1 }')
+}
 
 if ! command -v gh >/dev/null 2>&1; then
     echo "GitHub CLI (gh) is required." >&2
@@ -79,21 +105,29 @@ if [[ "${#firmware_files[@]}" -ne 1 ]]; then
 fi
 
 if [[ -z "$mount_point" ]]; then
-    mount_points=()
-    for mount_root in /Volumes "/run/media/$USER" "/media/$USER"; do
-        [[ -d "$mount_root" ]] || continue
-        while IFS= read -r -d '' info_file; do
-            mount_points+=("$(dirname -- "$info_file")")
-        done < <(find "$mount_root" -maxdepth 2 -type f -name INFO_UF2.TXT -print0 2>/dev/null)
+    for ((attempt = 0; attempt <= uf2_wait_seconds; attempt++)); do
+        mount_known_uf2_devices
+        find_mounted_uf2
+
+        if [[ "${#mount_points[@]}" -eq 1 ]]; then
+            mount_point="${mount_points[0]}"
+            break
+        fi
+
+        if [[ "${#mount_points[@]}" -gt 1 ]]; then
+            echo "More than one UF2 device is mounted." >&2
+            printf '  %s\n' "${mount_points[@]}" >&2
+            exit 1
+        fi
+
+        ((attempt == uf2_wait_seconds)) || sleep 1
     done
 
-    if [[ "${#mount_points[@]}" -ne 1 ]]; then
-        echo "Expected exactly one mounted UF2 device, found ${#mount_points[@]}." >&2
-        printf '  %s\n' "${mount_points[@]}" >&2
+    if [[ -z "$mount_point" ]]; then
+        echo "No UF2 device appeared within $uf2_wait_seconds seconds." >&2
         echo "Put the keyboard half in bootloader mode or provide its mount point." >&2
         exit 1
     fi
-    mount_point="${mount_points[0]}"
 fi
 
 if [[ ! -f "$mount_point/INFO_UF2.TXT" ]]; then
