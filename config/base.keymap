@@ -280,7 +280,7 @@ ZMK_LAYER(num,
 ZMK_LAYER(nav,
 
 //╭──────╮ ╭─────  ────────┬────────────────┬───────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-&kp LG(GRAVE) &tmux_prev_window &tmux_next_window &tmux_last_window &tmux_choose_window &tmux_new_window X_MT &tmux_join_previous_window &tmux_paste_buffer XXX                 XXX XXX XXX
+&kp LG(GRAVE) &tmux_last_window &tmux_prev_window &tmux_next_window &tmux_choose_window &tmux_new_window X_MT &tmux_join_previous_window &tmux_paste_buffer XXX                 XXX XXX XXX
 //├──────┤ ├────  ─────────┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
 &sk LCTRL          &sk LCTRL       &sk LALT       &sk LGUI       &sk LSHFT     &tmux_copy_mode X_MM           &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT     XXX           XXX
 //├──────┤ ├───────────--──┼────────────────┼─────────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
