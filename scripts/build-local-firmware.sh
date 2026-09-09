@@ -32,6 +32,7 @@ fi
 
 podman exec \
     --user "$(id -u):$(id -g)" \
+    --workdir "$root_dir" \
     --env "HOME=$HOME" \
     --env "ZEPHYR_SDK_INSTALL_DIR=$sdk_dir" \
     "$container" \
