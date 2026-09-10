@@ -56,7 +56,7 @@ layers:
     - "*"
     - "("
     - ")"
-    - ESC
+    - G
     - {t: LALT, h: sticky}
     - '1'
     - '2'
