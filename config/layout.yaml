@@ -37,7 +37,7 @@ layers:
     - "."
     - "/"
     - LCTRL
-    - LGUI
+    - {t: ESC, h: LGUI}
     - {t: SPACE, h: NAV}
     - {t: DEL, h: NAV2}
     - {t: RET, h: FUN}
@@ -81,7 +81,7 @@ layers:
     - {t: RCTRL, h: sticky}
     - ''
     - LSHFT
-    - LGUI
+    - {t: ESC, h: LGUI}
     - SPACE
     - DOT
     - RET
@@ -125,7 +125,7 @@ layers:
     - END
     - ''
     - LSHFT
-    - LGUI
+    - {t: ESC, h: LGUI}
     - SPACE
     - DOT
     - RET
@@ -169,7 +169,7 @@ layers:
     - BT 3
     - BT CLR
     - LSHFT
-    - LGUI
+    - {t: ESC, h: LGUI}
     - SPACE
     - LALT
     - RET
@@ -195,10 +195,10 @@ layers:
     - LC(RET)
     - RET
     - DEL
-    - MOUSE_LEFT
-    - MOUSE_DOWN
-    - MOUSE_UP
-    - MOUSE_RIGHT
+    - LA(H)
+    - LA(J)
+    - LA(K)
+    - LA(L)
     - ''
     - LCTRL
     - {t: LCTRL, h: sticky}
@@ -213,7 +213,7 @@ layers:
     - SCROLL_RIGHT
     - ''
     - LSHFT
-    - LGUI
+    - {t: ESC, h: LGUI}
     - SPACE
     - LALT
     - LCLK
