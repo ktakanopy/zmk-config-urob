@@ -47,7 +47,7 @@ ZMK_MACRO(tilspc,
 )
 
 ZMK_MACRO(tilde_slash,
-    bindings = <&macro_tap &kp TILDE &kp FSLH>;
+    bindings = <&macro_tap &kp TILDE &kp SPACE &kp FSLH>;
 )
 
 
