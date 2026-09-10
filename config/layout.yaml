@@ -236,6 +236,6 @@ combos:
   - {p: [18, 30], k: PIPE, l: [base, num]}
   - {p: [27, 26], k: LC(X), l: [base, num]}
   - {p: [16, 28], k: PLUS, l: [base, num]}
-  - {p: [19, 31], k: TILDE, l: [base, num]}
+  - {p: [7, 19], k: TILDE, l: [base]}
   - {p: [19, 8], k: QTSPC, l: [base, num]}
   - {p: [20, 31], k: FSLH, l: [base, num]}
