@@ -21,7 +21,7 @@
 #define QUICK_TAP_MS 175
 
 &sk {  // sticky-key config
-    release-after-ms = <900>;  // release after 0.9s
+    release-after-ms = <1500>; // release after 1.5s
     quick-release;             // no double capitalization when rolling keys
 };
 
