@@ -101,6 +101,14 @@ ZMK_HOLD_TAP(fst_lt,
     bindings = <&kp>, <&kp>;
 )
 
+ZMK_HOLD_TAP(thumb_lt,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    require-prior-idle-ms = <150>;
+    bindings = <&mo>, <&kp>;
+)
+
 ZMK_MACRO(tmux_prev_window,
     wait-ms = <10>;
     tap-ms = <10>;
@@ -199,7 +207,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &alt_caps     &kp Z         &kp X         &kp C         &kp V         &kp B       X_MB     &kp N      &kp M            &kp COMMA     &kp DOT       &kp FSLH     &kp LSHFT
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                    &fst_lt LGUI ESC      &lt NAV SPACE       &lt NAV2 DEL     X_MH     &lt FUN RET      &lt NUM BSPC  &shift_caps_word
+                                    &fst_lt LGUI ESC      &thumb_lt NAV SPACE &thumb_lt NAV2 DEL X_MH &thumb_lt FUN RET &thumb_lt NUM BSPC &shift_caps_word
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
